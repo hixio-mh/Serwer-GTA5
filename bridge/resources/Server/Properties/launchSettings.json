@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Server": {
+      "commandName": "Executable",
+      "executablePath": "I:\\RAGE_Multiplayer\\server-files\\server.exe",
+      "workingDirectory": "I:\\RAGE_Multiplayer\\server-files"
+    }
+  }
+}
