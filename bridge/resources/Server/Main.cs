@@ -7,17 +7,21 @@ using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
 using Database;
-using Mysql = Database.Mysql;
+using Mysql = Database.CMysql;
+using Managers;
+
 namespace Main
 {
-    public class Main : Script
+    public class CMain : Script
     {
-        static public Main pMain;
+        static public CMain pMain;
 
-        public Mysql pMysql { get; }
+        public CMysql pMysql { get; }
+        public CManagers pManagers { get; }
 
-        private Main()
+        private CMain()
         {
+            pManagers = new CManagers();
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 
@@ -27,15 +31,15 @@ namespace Main
         [ServerEvent(Event.ResourceStart)]
         public void OnResourceStart()
         {
-            PlayersResult res1 = pMysql.select.PlayerByUID(3);
+            CPlayersResult res1 = pMysql.select.PlayerByUID(3);
             Console.WriteLine("Gracz po uid, login: {0}", res1.login);
-            PlayersResult res2 = pMysql.select.PlayerByLogin("zlodziejdbn");
+            CPlayersResult res2 = pMysql.select.PlayerByLogin("zlodziejdbn");
             Console.WriteLine("Konto po loginie1, pid: {0}", res2.pid);
-            PlayersResult res3 = pMysql.select.PlayerByLogin("zlOdziEJdbN");
+            CPlayersResult res3 = pMysql.select.PlayerByLogin("zlOdziEJdbN");
             Console.WriteLine("Konto po loginie2, pid: {0}", res3.pid);
-            PlayersResult res4 = pMysql.select.PlayerByEmail("inny.EMAIL@wp.pl");
+            CPlayersResult res4 = pMysql.select.PlayerByEmail("inny.EMAIL@wp.pl");
             Console.WriteLine("Konto po emailu1, pid: {0}", res4.pid);
-            PlayersResult res5 = pMysql.select.PlayerByEmail("inny.email@wp.pl");
+            CPlayersResult res5 = pMysql.select.PlayerByEmail("inny.email@wp.pl");
             Console.WriteLine("Konto po emailu2, pid: {0}", res5.pid);
 
         }

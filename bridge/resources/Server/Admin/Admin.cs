@@ -8,9 +8,9 @@ using GTANetworkInternals;
 using GTANetworkMethods;
 using ExtendEntity;
 
-public class Admin : Script
+public class CAdmin : Script
 {
-    Admin()
+    CAdmin()
     {
         Console.WriteLine("Admin włączony");
     }

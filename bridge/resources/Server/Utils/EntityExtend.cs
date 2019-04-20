@@ -9,7 +9,7 @@ using GTANetworkMethods;
 
 namespace ExtendEntity
 {
-    public static class EntityExtension 
+    public static class CEntityExtension 
     {
         public static bool SetValue(this GTANetworkAPI.Entity entity, string strKey, object value)
         {

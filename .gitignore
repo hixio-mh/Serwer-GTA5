@@ -4,3 +4,7 @@ bridge/resources/\.vs/Resources/v16/Server/sqlite3/db\.lock
 bridge/resources/\.vs/Resources/v16/Server/sqlite3/storage\.ide
 
 bridge/resources/\.vs/Resources/v16/Server/sqlite3/
+
+bridge/server_logs\.txt
+
+bridge/server_exceptions\.txt

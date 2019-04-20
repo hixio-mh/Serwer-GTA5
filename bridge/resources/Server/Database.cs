@@ -10,23 +10,23 @@ using Main;
 
 namespace Database
 {
-    using MySql.Data.MySqlClient; // https://www.cryptool.org/trac/CrypTool2/browser/trunk/AppReferences/x64/MySql.Data.dll?rev=2020
+    using MySql.Data.MySqlClient;
     using MySql;
 
-    public class Mysql
+    public class CMysql
     {
         public readonly string strConnection = "server=87.98.236.134;uid=db_42756;password=UuUMYlaU8Pu3;database=db_42756;port=3306;CharSet=utf8;";
         private MySqlConnection pConnection;
         private int RecordsAffected = 0;
-        public Select select;
+        public CSelect select;
 
-        public static Mysql initialize()
+        public static CMysql initialize()
         {
-            Mysql pMysql = new Mysql();
-            pMysql.select = new Select();
+            CMysql pMysql = new CMysql();
+            pMysql.select = new CSelect();
             return pMysql;
         }
-        protected Mysql()
+        protected CMysql()
         {
             pConnection = new MySqlConnection(strConnection);
         }
@@ -102,30 +102,30 @@ namespace Database
             return result;
         }
     }
-    public class Select : Mysql
+    public class CSelect : CMysql
     {
-        public Select()
+        public CSelect()
         {
         }
 
-        private void readPlayerResult(MySqlDataReader reader, ref PlayersResult playersResult)
+        private void readPlayerResult(MySqlDataReader reader, ref CPlayersResult CPlayersResult)
         {
             if (reader.Read())
             {
-                playersResult.isResult = true;
-                playersResult.pid = reader.GetUInt32("pid");
-                playersResult.login = reader.GetString("login");
-                playersResult.pass = reader.GetString("pass");
-                playersResult.email = reader.GetString("email");
-                playersResult.email = reader.GetString("email");
+                CPlayersResult.isResult = true;
+                CPlayersResult.pid = reader.GetUInt32("pid");
+                CPlayersResult.login = reader.GetString("login");
+                CPlayersResult.pass = reader.GetString("pass");
+                CPlayersResult.email = reader.GetString("email");
+                CPlayersResult.email = reader.GetString("email");
             }
             else
-                playersResult.isResult = false;
+                CPlayersResult.isResult = false;
 
         }
-        public PlayersResult PlayerByUID(uint uid)
+        public CPlayersResult PlayerByUID(uint uid)
         {
-            PlayersResult result = new PlayersResult();
+            CPlayersResult result = new CPlayersResult();
             using (MySqlDataReader reader = RawGet("select pid,login,pass,email from players where pid = @p1 limit 1", uid.ToString()))
             {
                 readPlayerResult(reader, ref result);
@@ -133,9 +133,9 @@ namespace Database
             Finish();
             return result;
         }
-        public PlayersResult PlayerByLogin(string login)
+        public CPlayersResult PlayerByLogin(string login)
         {
-            PlayersResult result = new PlayersResult();
+            CPlayersResult result = new CPlayersResult();
             using (MySqlDataReader reader = RawGet("select pid,login,pass,email from players where lower(login) = @p1 limit 1", login.ToLower()))
             {
                 readPlayerResult(reader, ref result);
@@ -143,9 +143,9 @@ namespace Database
             Finish();
             return result;
         }
-        public PlayersResult PlayerByEmail(string email)
+        public CPlayersResult PlayerByEmail(string email)
         {
-            PlayersResult result = new PlayersResult();
+            CPlayersResult result = new CPlayersResult();
             using (MySqlDataReader reader = RawGet("select pid,login,pass,email from players where lower(email) = @p1 limit 1", email.ToLower()))
             {
                 readPlayerResult(reader, ref result);
@@ -155,21 +155,21 @@ namespace Database
         }
     }
 
-    public class PlayersResult
+    public class CPlayersResult
     {
         public bool isResult;
         public uint pid;
         public string login;
         public string pass;
         public string email;
-        public PlayersResult()
+        public CPlayersResult()
         {
-
+            isResult = false;
         }
     }
 
-    public class PlayersResults : PlayersResult
+    public class CPlayersResults : CPlayersResult
     {
-        public List<PlayersResult> results;
+        public List<CPlayersResult> results;
     }
 }
