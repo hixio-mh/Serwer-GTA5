@@ -1,10 +1,44 @@
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
 
-bridge/resources/\.vs/Resources/v16/Server/sqlite3/db\.lock
+# Visual Studio Code
+.vscode
 
-bridge/resources/\.vs/Resources/v16/Server/sqlite3/storage\.ide
+# Rider
+.idea
 
-bridge/resources/\.vs/Resources/v16/Server/sqlite3/
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio 2015
+.vs/
+bridge/server_exceptions\.txt
 
 bridge/server_logs\.txt
 
-bridge/server_exceptions\.txt
+bridge/resources/obj/Debug/
+
+bridge/resources/Server/obj/Debug/netcoreapp2\.2/

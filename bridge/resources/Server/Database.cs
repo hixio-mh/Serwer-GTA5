@@ -19,6 +19,7 @@ namespace Database
         private MySqlConnection pConnection;
         private int RecordsAffected = 0;
         public CSelect select;
+        public long LastInsertedID = 0;
 
         public static CMysql initialize()
         {
@@ -56,8 +57,40 @@ namespace Database
             pConnection.Close();
             return true;
         }
+        public bool Update(string strQuery, params object[] parametrsList)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            for (int i = 0; i < parametrsList.Length; i++)
+            {
+                parameters.Add("p" + (i + 1), parametrsList[i]);
+            }
+
+            MySqlCommand command = Prepare(strQuery, parameters);
+            pConnection.Open();
+            command.ExecuteNonQueryAsync();
+            LastInsertedID = command.LastInsertedId;
+            pConnection.Close();
+            return true;
+        }
+
         public bool UpdateBlocking(string strQuery, Dictionary<string, object> parameters = null)
         {
+            MySqlCommand command = Prepare(strQuery, parameters);
+            pConnection.Open();
+            command.ExecuteNonQuery();
+            LastInsertedID = command.LastInsertedId;
+            pConnection.Close();
+            return true;
+        }
+
+        public bool UpdateBlocking(string strQuery, params string[] parametrsList)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            for (int i = 0; i < parametrsList.Length; i++)
+            {
+                parameters.Add("p" + (i + 1), parametrsList[i]);
+            }
+
             MySqlCommand command = Prepare(strQuery, parameters);
             pConnection.Open();
             command.ExecuteNonQuery();
@@ -101,6 +134,20 @@ namespace Database
             pConnection.Close();
             return result;
         }
+
+        public object GetValue(string strQuery, Dictionary<string,object> parameters = null)
+        {
+            object result = null;
+            using (MySqlDataReader reader = RawGet(strQuery, parameters))
+            {
+                if(reader.Read())
+                {
+                    result = reader.GetValue(0);
+                }
+            }
+            pConnection.Close();
+            return result;
+        }
     }
     public class CSelect : CMysql
     {
@@ -117,7 +164,8 @@ namespace Database
                 CPlayersResult.login = reader.GetString("login");
                 CPlayersResult.pass = reader.GetString("pass");
                 CPlayersResult.email = reader.GetString("email");
-                CPlayersResult.email = reader.GetString("email");
+                CPlayersResult.money = reader.GetInt64("money");
+                CPlayersResult.xp = reader.GetUInt32("xp");
             }
             else
                 CPlayersResult.isResult = false;
@@ -126,7 +174,7 @@ namespace Database
         public CPlayersResult PlayerByUID(uint uid)
         {
             CPlayersResult result = new CPlayersResult();
-            using (MySqlDataReader reader = RawGet("select pid,login,pass,email from players where pid = @p1 limit 1", uid.ToString()))
+            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where pid = @p1 limit 1", uid.ToString()))
             {
                 readPlayerResult(reader, ref result);
             }
@@ -136,7 +184,7 @@ namespace Database
         public CPlayersResult PlayerByLogin(string login)
         {
             CPlayersResult result = new CPlayersResult();
-            using (MySqlDataReader reader = RawGet("select pid,login,pass,email from players where lower(login) = @p1 limit 1", login.ToLower()))
+            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where lower(login) = @p1 limit 1", login.ToLower()))
             {
                 readPlayerResult(reader, ref result);
             }
@@ -146,7 +194,7 @@ namespace Database
         public CPlayersResult PlayerByEmail(string email)
         {
             CPlayersResult result = new CPlayersResult();
-            using (MySqlDataReader reader = RawGet("select pid,login,pass,email from players where lower(email) = @p1 limit 1", email.ToLower()))
+            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where lower(email) = @p1 limit 1", email.ToLower()))
             {
                 readPlayerResult(reader, ref result);
             }
@@ -162,6 +210,8 @@ namespace Database
         public string login;
         public string pass;
         public string email;
+        public long money;
+        public uint xp;
         public CPlayersResult()
         {
             isResult = false;
