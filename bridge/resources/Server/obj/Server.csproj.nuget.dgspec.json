@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "I:\\RAGE_Multiplayer\\server-files\\bridge\\resources\\Server\\Server.csproj": {}
+    "C:\\Users\\anfar\\Desktop\\Serwer GTA5\\Serwer-GTA5\\bridge\\resources\\Server\\Server.csproj": {}
   },
   "projects": {
-    "I:\\RAGE_Multiplayer\\server-files\\bridge\\resources\\Server\\Server.csproj": {
+    "C:\\Users\\anfar\\Desktop\\Serwer GTA5\\Serwer-GTA5\\bridge\\resources\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\RAGE_Multiplayer\\server-files\\bridge\\resources\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\anfar\\Desktop\\Serwer GTA5\\Serwer-GTA5\\bridge\\resources\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "I:\\RAGE_Multiplayer\\server-files\\bridge\\resources\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-        "outputPath": "I:\\RAGE_Multiplayer\\server-files\\bridge\\resources\\Server\\obj\\",
+        "projectPath": "C:\\Users\\anfar\\Desktop\\Serwer GTA5\\Serwer-GTA5\\bridge\\resources\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\anfar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anfar\\Desktop\\Serwer GTA5\\Serwer-GTA5\\bridge\\resources\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\anfar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -42,18 +40,6 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "dependencies": {
-            "BCrypt": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            }
-          },
           "imports": [
             "net461"
           ],

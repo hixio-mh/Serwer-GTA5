@@ -1,0 +1,1 @@
+require('./nametags/render.js');
