@@ -1,0 +1,1813 @@
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:27:01
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting admin resource..
+admin: loading scripts.. found 1 script(s)
+-> Error starting 'admin'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+-> Starting welcomemessages resource..
+welcomemessages: loading scripts.. found 1 script(s)
+-> Error starting 'welcomemessages'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:28:11
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting admin resource..
+admin: loading scripts.. found 1 script(s)
+-> Error starting 'admin'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+-> Starting welcomemessages resource..
+welcomemessages: loading scripts.. found 1 script(s)
+-> Error starting 'welcomemessages'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:32:58
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting admin resource..
+admin: loading scripts.. found 1 script(s)
+-> Error starting 'admin'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+-> Starting welcomemessages resource..
+welcomemessages: loading scripts.. found 1 script(s)
+-> Resource welcomemessages started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:34:44
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting admin resource..
+admin: loading scripts.. found 1 script(s)
+-> Error starting 'admin'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+-> Starting welcomemessages resource..
+welcomemessages: loading scripts.. found 1 script(s)
+-> Resource welcomemessages started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:35:35
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting admin resource..
+admin: loading scripts.. found 1 script(s)
+-> Error starting 'admin'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+-> Resource resources started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:37:38
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting admin resource..
+admin: loading scripts.. found 1 script(s)
+-> Error starting 'admin'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+resources: instantiating resources.Main..
+asdf
+-> Resource resources started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:45:30
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting admin resource..
+admin: loading scripts.. found 1 script(s)
+-> Error starting 'admin'
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+resources: instantiating resources.Main..
+asdf
+-> Resource resources started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:53:04
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+resources: instantiating resources.Main..
+asdf
+-> Resource resources started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:53:19
+Loaded 451 entries from vehicleData.json
+Loading resources..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 10:53:23
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+resources: instantiating resources.Main..
+Przed
+Po
+-> Resource resources started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 11:29:37
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+-> Resource resources started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 12:28:37
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+resources: instantiating ClassLibrary2.Class1..
+-> Resource resources started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 12:30:16
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting resources resource..
+resources: loading scripts.. found 1 script(s)
+resources: instantiating ClassLibrary2.Class1..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 12:37:18
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main.Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 12:51:18
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main.Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 12:53:52
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main.Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 12:54:05
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main.Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 12:54:38
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main.Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 14:22:15
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating VehicleManager..
+Core: instantiating ElementManager..
+Core: instantiating Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 14:49:57
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+Admin: loading scripts.. found 1 script(s)
+-> Resource Admin started!
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating VehicleManager..
+Core: instantiating ElementManager..
+Core: instantiating Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 14:51:11
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+Admin: loading scripts.. found 1 script(s)
+-> Resource Admin started!
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating VehicleManager..
+Core: instantiating ElementManager..
+Core: instantiating Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 15:04:40
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+Admin: loading scripts.. found 1 script(s)
+-> Resource Admin started!
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main..
+Core: instantiating ElementManager..
+Core: instantiating VehicleManager..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 15:07:28
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+Admin: loading scripts.. found 1 script(s)
+Admin: instantiating Main..
+Admin: loading commands.. found 1 command(s)
+Admin: loaded 1 commands(s)
+-> Resource Admin started!
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main..
+Core: instantiating ElementManager..
+Core: instantiating VehicleManager..
+-> Resource Core started!
+Started! Waiting for connections..
+[03:23:29][0]WeirdNewbie: asdf
+[03:41:28][0]WeirdNewbie: kurrrła, 20 fpsów
+[03:41:44][0]WeirdNewbie: t
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 16:37:53
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+Admin: loading scripts.. found 1 script(s)
+Admin: instantiating Main..
+Admin: loading commands.. found 2 command(s)
+Admin: loaded 2 commands(s)
+-> Resource Admin started!
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 16:38:38
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+Admin: loading scripts.. found 1 script(s)
+Admin: instantiating Main..
+Admin: loading commands.. found 2 command(s)
+Admin: loaded 2 commands(s)
+-> Resource Admin started!
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 16:46:08
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+Admin: loading scripts.. found 1 script(s)
+Admin: instantiating Main..
+Admin: loading commands.. found 2 command(s)
+Admin: loaded 2 commands(s)
+-> Resource Admin started!
+-> Starting Core resource..
+Core: loading scripts.. found 1 script(s)
+Core: instantiating Main..
+-> Resource Core started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:05:35
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Admin resource..
+-> Error starting Admin, resource not found.
+-> Starting Core resource..
+-> Error starting Core, resource not found.
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:07:06
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:13:34
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading commands.. found 1 command(s)
+Server: loaded 1 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:16:42
+Loaded 451 entries from vehicleData.json
+Loading resources..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:19:23
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading commands.. found 1 command(s)
+Server: loaded 1 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:21:56
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading commands.. found 1 command(s)
+Server: loaded 1 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:29:48
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loading server events.. found 1 server event(s)
+Server: loaded 2 server events(s)
+Server: loading commands.. found 1 command(s)
+Server: loaded 1 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:32:21
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 1 command(s)
+Server: loaded 1 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:34:43
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 1 command(s)
+Server: loaded 1 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:43:15
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 2 command(s)
+Server: loaded 2 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 18.04.2019 21:47:08
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 2 command(s)
+Server: loaded 2 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+[09:47:28][0]WeirdNewbie: t
+[10:06:55][0]WeirdNewbie: tas
+[10:07:17][0]WeirdNewbie: ~R~test
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 16:26:22
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 2 command(s)
+Server: loaded 2 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 16:28:11
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 16:47:42
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 16:50:03
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 16:51:39
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+UNHANDLED EXCEPTION IN COMMAND testget FOR RESOURCE Server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at void Admin.testget(Client player) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Admin\Admin.cs:line 40
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at bool GTANetworkInternals.CommandParser.Parse(Client sender, string cmdRaw, string ourcmd, string[] args)
+UNHANDLED EXCEPTION IN COMMAND testget FOR RESOURCE Server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at void Admin.testget(Client player) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Admin\Admin.cs:line 40
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at bool GTANetworkInternals.CommandParser.Parse(Client sender, string cmdRaw, string ourcmd, string[] args)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 16:54:47
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 18:16:33
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 18:23:03
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 31
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 18:23:25
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Connection must be valid and open.
+   at void MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 18:24:03
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 18:29:50
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 18:38:56
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 41
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 24
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 18:41:01
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 19:50:21
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at Encoding MySql.Data.MySqlClient.CharSetMap.GetEncoding(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 42
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 19:57:18
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 19:59:35
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:01:08
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:03:07
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:04:41
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:06:57
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 44
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:10:35
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at Encoding MySql.Data.MySqlClient.CharSetMap.GetEncoding(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 42
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:18:56
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:24:40
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 44
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:32:10
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Connection must be valid and open.
+   at void MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at int MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 25
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:32:48
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at Encoding MySql.Data.MySqlClient.CharSetMap.GetEncoding(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:33:38
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 45
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 24
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:34:06
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 47
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 28
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:34:24
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MySql.Data.MySqlClient.MySqlException: Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException: Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   --- End of inner exception stack trace ---
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 50
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 29
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:34:46
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:36:30
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:53:32
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MySql.Data.MySqlClient.MySqlException: Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException: Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   --- End of inner exception stack trace ---
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 50
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 29
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:54:05
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 20:55:47
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MySql.Data.MySqlClient.MySqlException: Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException: Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   --- End of inner exception stack trace ---
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 50
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 29
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 22
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 21:30:22
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 45
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 24
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 22
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 21:48:11
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 21:55:49
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 21:57:00
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 21:58:30
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 22:27:42
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 19.04.2019 22:30:22
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+[10:31:03][0]WeirdNewbie: rilm here
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 10:19:20
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:11:21
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:11:27
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:13:05
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:13:51
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:14:21
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:14:31
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:19:42
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:21:22
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:23:01
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:25:08
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:31:33
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:32:58
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:35:26
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 11:40:45
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:14:52
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:16:40
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:27:29
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySqlDataReader Database.Mysql.RawGet(string strQuery, string[] parametrsList) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 81
+   at PlayersResult Database.Select.PlayerByLogin(string login) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 134
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 32
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:30:45
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Error starting 'Server'
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySqlDataReader Database.Mysql.RawGet(string strQuery, string[] parametrsList) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 85
+   at PlayersResult Database.Select.PlayerByLogin(string login) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 141
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 32
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.ScriptingEngine.InvokeVoidMethod(String method, Object[] args)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.EventHandler.ParseEx(Event _event, ScriptingEngine engine, Object[] arguments)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at GTANetworkInternals.GameServer.StartResource(String resourceName, String parent)
+
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:31:00
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:37:31
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:43:16
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:47:10
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:47:33
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:47:52
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:49:15
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:53:34
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:53:54
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 12:54:40
+Loaded 451 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating Admin..
+Server: instantiating Main.Main..
+Server: loading server events.. found 1 server event(s)
+Server: loaded 1 server events(s)
+Server: loading commands.. found 4 command(s)
+Server: loaded 4 commands(s)
+-> Resource Server started!
+Started! Waiting for connections..
+Initializing Bootstrapper.dll (0.3.7.0)..
+-> SERVER STARTED AT 20.04.2019 13:02:30

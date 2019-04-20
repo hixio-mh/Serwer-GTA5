@@ -1,0 +1,1176 @@
+
+==================[18.04.2019 10:27:04]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:27:04]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:28:13]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:28:13]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:33:01]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:34:47]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:35:37]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:37:40]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 10:45:33]==================
+System.TypeLoadException: Method 'CommonGetSpecialTypeMember' in type 'Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation' from assembly 'Microsoft.CodeAnalysis.VisualBasic, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' does not have an implementation.
+   at IEnumerable<Script> GTANetworkInternals.GameServer.CompileScript(Dictionary<string, string> script, string resourceName, ICollection<string> resourceAssemblies, bool vbBasic)
+   at bool GTANetworkInternals.GameServer.StartResource(string resourceName, string parent) in C:\Users\Adam\Documents\Git\comp-layer2\BootstrapperNC\Constants\NativeData.cs:line 9
+=========================================================
+
+==================[18.04.2019 21:44:07]==================
+System.ArgumentException: Requested value 'Addr' was not found.
+   at bool Enum.TryParseEnum(Type enumType, string value, bool ignoreCase, ref EnumResult parseResult)
+=========================================================
+
+==================[19.04.2019 16:52:04]==================
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at void Admin.testget(Client player) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Admin\Admin.cs:line 40
+=========================================================
+
+==================[19.04.2019 16:52:04]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at void Admin.testget(Client player) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Admin\Admin.cs:line 40
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 16:52:06]==================
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at void Admin.testget(Client player) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Admin\Admin.cs:line 40
+=========================================================
+
+==================[19.04.2019 16:52:06]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at void Admin.testget(Client player) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Admin\Admin.cs:line 40
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 18:16:45]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+=========================================================
+
+==================[19.04.2019 18:16:45]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[19.04.2019 18:16:45]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void MySql.Data.MySqlClient.Driver.Dispose(bool disposing)
+=========================================================
+
+==================[19.04.2019 18:16:45]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[19.04.2019 18:16:46]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 18:23:08]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+=========================================================
+
+==================[19.04.2019 18:23:08]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void MySql.Data.MySqlClient.Driver.Dispose(bool disposing)
+=========================================================
+
+==================[19.04.2019 18:23:08]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[19.04.2019 18:23:08]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[19.04.2019 18:23:08]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 31
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 18:23:30]==================
+System.InvalidOperationException: Connection must be valid and open.
+   at void MySql.Data.MySqlClient.MySqlCommand.CheckState()
+=========================================================
+
+==================[19.04.2019 18:23:30]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Connection must be valid and open.
+   at void MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 18:24:08]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+=========================================================
+
+==================[19.04.2019 18:24:08]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void MySql.Data.MySqlClient.Driver.Dispose(bool disposing)
+=========================================================
+
+==================[19.04.2019 18:24:08]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[19.04.2019 18:24:08]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[19.04.2019 18:24:08]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 18:29:56]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+=========================================================
+
+==================[19.04.2019 18:29:56]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[19.04.2019 18:29:56]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void MySql.Data.MySqlClient.Driver.Dispose(bool disposing)
+=========================================================
+
+==================[19.04.2019 18:29:56]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[19.04.2019 18:29:57]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 18:39:01]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+=========================================================
+
+==================[19.04.2019 18:39:01]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void MySql.Data.MySqlClient.Driver.Dispose(bool disposing)
+=========================================================
+
+==================[19.04.2019 18:39:01]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[19.04.2019 18:39:01]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[19.04.2019 18:39:01]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 41
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 24
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 18:41:07]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+=========================================================
+
+==================[19.04.2019 18:41:07]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void MySql.Data.MySqlClient.Driver.Dispose(bool disposing)
+=========================================================
+
+==================[19.04.2019 18:41:07]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[19.04.2019 18:41:07]==================
+System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[19.04.2019 18:41:07]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NotSupportedException: No data is available for encoding 1252. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at Encoding System.Text.Encoding.GetEncoding(int codepage)
+   at new MySql.Data.MySqlClient.Driver(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 40
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 18
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 19:50:34]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 19:50:34]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at Encoding MySql.Data.MySqlClient.CharSetMap.GetEncoding(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 42
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 19:57:28]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 19:59:51]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 19:59:52]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 19:59:52]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:01:20]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:01:20]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:01:20]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:03:18]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:03:18]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:03:18]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:04:51]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:04:51]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:04:51]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:07:04]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:07:05]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:07:05]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:07:05]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:07:05]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 44
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:10:40]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:10:40]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at Encoding MySql.Data.MySqlClient.CharSetMap.GetEncoding(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 42
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:19:06]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:19:06]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:19:06]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:24:47]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:24:47]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:24:47]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:24:47]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:24:47]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 44
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:32:20]==================
+System.InvalidOperationException: Connection must be valid and open.
+   at void MySql.Data.MySqlClient.MySqlCommand.CheckState()
+=========================================================
+
+==================[19.04.2019 20:32:20]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Connection must be valid and open.
+   at void MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at int MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 25
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:32:53]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:32:54]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at Encoding MySql.Data.MySqlClient.CharSetMap.GetEncoding(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 23
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:33:44]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:33:44]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:33:44]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:33:44]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:33:44]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 45
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 24
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:34:11]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:34:11]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:34:11]==================
+System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[19.04.2019 20:34:11]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 47
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 28
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:34:29]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:34:29]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:34:30]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:34:30]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+=========================================================
+
+==================[19.04.2019 20:34:30]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+=========================================================
+
+==================[19.04.2019 20:34:30]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+=========================================================
+
+==================[19.04.2019 20:34:30]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MySql.Data.MySqlClient.MySqlException: Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException: Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   --- End of inner exception stack trace ---
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 50
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 29
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:34:56]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:34:56]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:34:56]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:36:39]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:36:39]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:36:39]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:53:39]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:53:39]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:53:39]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:53:39]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+=========================================================
+
+==================[19.04.2019 20:53:39]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+=========================================================
+
+==================[19.04.2019 20:53:40]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+=========================================================
+
+==================[19.04.2019 20:53:40]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MySql.Data.MySqlClient.MySqlException: Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException: Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   --- End of inner exception stack trace ---
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 50
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 29
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 20
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 20:54:13]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:54:13]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:54:13]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:54:43]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'System.Data.Entity'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:54:46]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.Entity'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:54:49]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FieldInfo MySql.Data.MySqlClient.MySqlClientFactory.get_MySqlDbProviderServicesInstance()
+=========================================================
+
+==================[19.04.2019 20:55:53]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:55:53]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 20:55:54]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 20:55:54]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+=========================================================
+
+==================[19.04.2019 20:55:54]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+=========================================================
+
+==================[19.04.2019 20:55:54]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+=========================================================
+
+==================[19.04.2019 20:55:54]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MySql.Data.MySqlClient.MySqlException: Fatal error encountered attempting to read the resultset. ---> MySql.Data.MySqlClient.MySqlException: Expected end of data packet
+   at void MySql.Data.MySqlClient.NativeDriver.CheckEOF()
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   --- End of inner exception stack trace ---
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 50
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 29
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 22
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 21:30:27]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 21:30:27]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 21:30:28]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 21:30:28]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 21:30:28]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at CharacterSet MySql.Data.MySqlClient.CharSetMap.GetCharacterSet(DBVersion version, string CharSetName)
+   at void MySql.Data.MySqlClient.MySqlField.SetFieldEncoding()
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnData(MySqlField field)
+   at void MySql.Data.MySqlClient.NativeDriver.GetColumnsData(MySqlField[] columns)
+   at MySqlField[] MySql.Data.MySqlClient.Driver.GetColumns(int count)
+   at void MySql.Data.MySqlClient.ResultSet.LoadColumns(int numCols)
+   at new MySql.Data.MySqlClient.ResultSet(Driver d, int statementId, int numCols)
+   at ResultSet MySql.Data.MySqlClient.Driver.NextResult(int statementId)
+   at bool MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at void MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at void MySql.Data.MySqlClient.MySqlCommand.ResetReader()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at List<object[]> Database.Mysql.RawGet(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 45
+   at new Database.Mysql() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 24
+   at void Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 22
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[19.04.2019 21:48:19]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 21:48:20]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[19.04.2019 21:48:20]==================
+System.Collections.Generic.KeyNotFoundException: The given key 'utf8mb4' was not present in the dictionary.
+   at void ThrowHelper.ThrowKeyNotFoundException<T>(T key)
+=========================================================
+
+==================[19.04.2019 22:27:46]==================
+System.InvalidOperationException: Connection must be valid and open.
+   at void MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+=========================================================
+
+==================[20.04.2019 11:13:54]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+=========================================================
+
+==================[20.04.2019 11:13:54]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[20.04.2019 11:14:24]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+=========================================================
+
+==================[20.04.2019 11:14:24]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[20.04.2019 11:14:36]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+=========================================================
+
+==================[20.04.2019 11:19:45]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+=========================================================
+
+==================[20.04.2019 11:21:25]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 30
+=========================================================
+
+==================[20.04.2019 11:25:12]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySqlCommand Database.Mysql.Prepare(string strQuery, Dictionary<string, object> parameters) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 36
+=========================================================
+
+==================[20.04.2019 12:14:57]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[20.04.2019 12:14:57]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[20.04.2019 12:14:57]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@p1' must be defined.
+   at bool MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlPacket packet, string parmName, int parameterIndex)
+=========================================================
+
+==================[20.04.2019 12:14:57]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered during command execution. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@p1' must be defined.
+   at bool MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlPacket packet, string parmName, int parameterIndex)
+   at void MySql.Data.MySqlClient.Statement.InternalBindParameters(string sql, MySqlParameterCollection parameters, MySqlPacket packet)
+   at void MySql.Data.MySqlClient.Statement.BindParameters()
+   at void MySql.Data.MySqlClient.PreparableStatement.Execute()
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySqlDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+=========================================================
+
+==================[20.04.2019 12:27:32]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[20.04.2019 12:27:33]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[20.04.2019 12:27:33]==================
+System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+=========================================================
+
+==================[20.04.2019 12:27:33]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySqlDataReader Database.Mysql.RawGet(string strQuery, string[] parametrsList) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 81
+   at PlayersResult Database.Select.PlayerByLogin(string login) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 134
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 32
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[20.04.2019 12:30:49]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[20.04.2019 12:30:49]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[20.04.2019 12:30:49]==================
+System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+=========================================================
+
+==================[20.04.2019 12:30:49]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The connection is already open.
+   at void MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySqlDataReader Database.Mysql.RawGet(string strQuery, string[] parametrsList) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 85
+   at PlayersResult Database.Select.PlayerByLogin(string login) in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Database.cs:line 141
+   at void Main.Main.OnResourceStart() in I:\RAGE_Multiplayer\server-files\bridge\resources\Server\Main.cs:line 32
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
