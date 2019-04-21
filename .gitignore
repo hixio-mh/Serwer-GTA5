@@ -42,3 +42,5 @@ bridge/server_logs\.txt
 bridge/resources/obj/Debug/
 
 bridge/resources/Server/obj/Debug/netcoreapp2\.2/
+
+bridge/resources/Server/obj/
