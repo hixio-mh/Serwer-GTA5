@@ -7,7 +7,7 @@ using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
 
-namespace ExtendEntity
+namespace Extend.Entity
 {
     public static class CEntityExtension 
     {
