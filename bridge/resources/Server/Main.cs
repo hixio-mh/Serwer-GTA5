@@ -9,6 +9,9 @@ using GTANetworkMethods;
 using Database;
 using Managers;
 using Utils;
+using Extend.Vehicle;
+using Vehicle = GTANetworkAPI.Vehicle;
+using Data.Vehicle;
 
 namespace Main
 {
@@ -31,12 +34,17 @@ namespace Main
             Globals.Mysql = CMysql.initialize();
             Globals.Managers = new CManagers();
             Globals.Utils = new CUtils();
+            VehicleData.InitiliazeDefault();
+
+            Vehicle vehA = Globals.Managers.vehicle.Create(EVehicleType.UNKNOWN, VehicleHash.Adder, new Vector3(-414.72, 1127.23, 325.90), new Vector3(0,0,0));
+            Vehicle vehB = Globals.Managers.vehicle.Create(EVehicleType.SALON, VehicleHash.Adder, new Vector3(-404.72, 1127.23, 325.90), new Vector3(0,0,0));
+            Console.WriteLine("vehicle type {0} {1}", vehA.IsType(EVehicleType.SALON), vehB.IsType(EVehicleType.SALON));
         }
 
         [ServerEvent(Event.ResourceStart)]
         public void OnResourceStart()
         {
-            CPlayersResult res1 = Globals.Mysql.select.PlayerByUID(3);
+            /*CPlayersResult res1 = Globals.Mysql.select.PlayerByUID(3);
             Console.WriteLine("Gracz po uid, login: {0}", res1.login);
             CPlayersResult res2 = Globals.Mysql.select.PlayerByLogin("zlodziejdbn");
             Console.WriteLine("Konto po loginie1, pid: {0}", res2.pid);
@@ -45,13 +53,20 @@ namespace Main
             CPlayersResult res4 = Globals.Mysql.select.PlayerByEmail("inny.EMAIL@wp.pl");
             Console.WriteLine("Konto po emailu1, pid: {0}", res4.pid);
             CPlayersResult res5 = Globals.Mysql.select.PlayerByEmail("inny.email@wp.pl");
-            Console.WriteLine("Konto po emailu2, pid: {0}", res5.pid);
+            Console.WriteLine("Konto po emailu2, pid: {0}", res5.pid);*/
 
         }
 
         [ServerEvent(Event.Update)]
         public void OnUpdate()
         {
+        }
+
+
+        [ServerEvent(Event.PlayerEnterVehicle)]
+        public void OnPlayerEnterVehicle(Client player, Vehicle vehicle, sbyte seatID)
+        {
+            Globals.Managers.vehicle.OnPlayerEnterVehicle(player, vehicle, seatID);
         }
     }
 }

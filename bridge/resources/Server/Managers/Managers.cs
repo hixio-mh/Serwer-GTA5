@@ -12,9 +12,11 @@ namespace Managers
     public class CManagers
     {
         public CAccountManager account;
+        public CVehicleManager vehicle;
         public CManagers()
         {
             account = new CAccountManager();
+            vehicle = new CVehicleManager();
         }
     }
 }

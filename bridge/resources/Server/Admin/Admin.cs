@@ -71,7 +71,7 @@ public class CAdmin : Script
 
         CAccount account = Globals.Managers.account.Register(login, hasło, email);
         Globals.Managers.account.LogIn(player, account);
-        player.SendChatMessage(String.Format("rejestrowano i zalogowano {0} {1}", player.IsLoggedIn().ToString(), player.Account().pid));
+        player.SendChatMessage("Zarejestrowano i zalogowano pomyślnie, id konta {0}", player.Account().pid);
     }
     [Command("login")]
     public void login(Client player, string login, string hasło)
@@ -106,21 +106,58 @@ public class CAdmin : Script
             return;
         }
         Globals.Managers.account.LogIn(player, pid);
-        player.SendChatMessage(String.Format("rejestrowano i zalogowano {0} {1}", player.IsLoggedIn().ToString(), player.Account().pid));
+        player.SendChatMessage("Zalogowano pomyślnie, id konta {0}",player.Account().pid);
     }
 
     [Command("testac")]
     public void testac(Client player)
     {
-        if(player.IsLoggedIn())
+        if (player.IsLoggedIn())
         {
             player.SendChatMessage(String.Format("testac ZALOGOWANY {0}", player.Account().pid));
-
         }
         else
         {
             player.SendChatMessage("testac NIEZALOGOWANY");
 
+        }
+    }
+
+    [Command("setmoney")]
+    public void setmoney(Client player, long amount)
+    {
+        if (player.IsLoggedIn())
+        {
+            player.SendChatMessage("Ustaw {0} $", amount);
+            player.Account().SetMoney(amount, "komenda /setmoney");
+        }
+        else
+        {
+            player.SendChatMessage("musisz być zalogowany");
+        }
+    }
+
+    [Command("gp")]
+    public void gp(Client player)
+    {
+        Console.WriteLine("{0:F2},{1:F2},{2:F2}", player.Position.X, player.Position.Y, player.Position.Z);
+    }
+    [Command("licgiv")]
+    public void licgiv(Client player)
+    {
+        if (player.IsLoggedIn())
+        {
+            player.Account().GiveLicense(1);
+            player.SendChatMessage("daj licencje 1");
+        }
+    }
+    [Command("liccheck")]
+    public void liccheck(Client player)
+    {
+        if (player.IsLoggedIn())
+        {
+            bool has = player.Account().HasLicense(1);
+            player.SendChatMessage("ma licencje 1? {0}",has);
         }
     }
 

@@ -31,5 +31,10 @@ namespace Extend.Client
             return account;
         }
 
+        public static void SendChatMessage(this GTANetworkAPI.Client player, string message, params object[] format)
+        {
+            player.SendChatMessage(string.Format(message, format));
+        }
+
     }
 }

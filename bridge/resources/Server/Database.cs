@@ -83,7 +83,7 @@ namespace Database
             return true;
         }
 
-        public bool UpdateBlocking(string strQuery, params string[] parametrsList)
+        public bool UpdateBlocking(string strQuery, params object[] parametrsList)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             for (int i = 0; i < parametrsList.Length; i++)
@@ -105,7 +105,7 @@ namespace Database
             pConnection.Open();
             return command.ExecuteReader();
         }
-        public MySqlDataReader RawGet(string strQuery, params string[] parametrsList)
+        public MySqlDataReader RawGet(string strQuery, params object[] parametrsList)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             for (int i = 0; i < parametrsList.Length; i++)
@@ -155,22 +155,44 @@ namespace Database
         {
         }
 
-        private void readPlayerResult(MySqlDataReader reader, ref CPlayersResult CPlayersResult)
+        private void readPlayerResult(MySqlDataReader reader, ref CPlayersResult playersResult)
         {
             if (reader.Read())
             {
-                CPlayersResult.isResult = true;
-                CPlayersResult.pid = reader.GetUInt32("pid");
-                CPlayersResult.login = reader.GetString("login");
-                CPlayersResult.pass = reader.GetString("pass");
-                CPlayersResult.email = reader.GetString("email");
-                CPlayersResult.money = reader.GetInt64("money");
-                CPlayersResult.xp = reader.GetUInt32("xp");
+                playersResult.isResult = true;
+                playersResult.pid = reader.GetUInt32("pid");
+                playersResult.login = reader.GetString("login");
+                playersResult.pass = reader.GetString("pass");
+                playersResult.email = reader.GetString("email");
+                playersResult.money = reader.GetInt64("money");
+                playersResult.xp = reader.GetUInt32("xp");
             }
             else
-                CPlayersResult.isResult = false;
+                playersResult.isResult = false;
+        }
+
+        private void readAccountLicenseResult(MySqlDataReader reader, ref CAccountLicenseResult accountLicenseResult)
+        {
+            accountLicenseResult.isResult = true;
+            accountLicenseResult.pid = reader.GetUInt32("pid");
+            accountLicenseResult.lid = reader.GetByte("lid");
+            if(!reader.IsDBNull(2))
+                accountLicenseResult.suspended = reader.GetDateTime("suspended");
+
+            if (!reader.IsDBNull(3))
+                accountLicenseResult.suspendedreason = reader.GetString("suspendedreason");
 
         }
+        private void readAccountLicenseResults(MySqlDataReader reader, ref List<CAccountLicenseResult> accountLicenseResults)
+        {
+            while (reader.Read())
+            {
+                CAccountLicenseResult license = new CAccountLicenseResult();
+                readAccountLicenseResult(reader, ref license);
+                accountLicenseResults.Add(license);
+            }
+        }
+
         public CPlayersResult PlayerByUID(uint uid)
         {
             CPlayersResult result = new CPlayersResult();
@@ -201,6 +223,16 @@ namespace Database
             Finish();
             return result;
         }
+        public List<CAccountLicenseResult> GetAccountLicenses(uint pid)
+        {
+            List<CAccountLicenseResult> licenses = new List<CAccountLicenseResult>();
+            using (MySqlDataReader reader = RawGet("select pid,lid,suspended,suspendedreason from accounts_licenses where pid = @p1", pid))
+            {
+                readAccountLicenseResults(reader, ref licenses);
+            }
+            Finish();
+            return licenses;
+        }
     }
 
     public class CPlayersResult
@@ -218,8 +250,16 @@ namespace Database
         }
     }
 
-    public class CPlayersResults : CPlayersResult
+    public class CAccountLicenseResult
     {
-        public List<CPlayersResult> results;
+        public bool isResult;
+        public uint pid;
+        public byte lid;
+        public DateTime suspended;
+        public string suspendedreason;
+        public CAccountLicenseResult()
+        {
+            isResult = false;
+        }
     }
 }
