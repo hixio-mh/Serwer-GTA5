@@ -1,10 +1,13 @@
-﻿using Extend.Client;
+﻿using Extend.Clients;
 using Extend.Entity;
-using Extend.String;
+using Extend.Strings;
 using GTANetworkAPI;
 using Logic.Account;
 using Main;
 using System;
+using Database;
+using Newtonsoft.Json;
+using Extend.Maths;
 
 public class CAdmin : Script
 {
@@ -140,8 +143,16 @@ public class CAdmin : Script
     [Command("gp")]
     public void gp(Client player)
     {
-        Console.WriteLine("{0:F2},{1:F2},{2:F2}", player.Position.X, player.Position.Y, player.Position.Z);
+        Console.WriteLine(player.Position.ToStr());
     }
+
+
+[Command("test")]
+public void test(Client player, float distance)
+{
+    NAPI.Marker.CreateMarker(1, player.GetPositionAtFront(distance), new Vector3(), new Vector3(), 2, 255, 0,0, false, uint.MaxValue);
+}
+
     [Command("licgiv")]
     public void licgiv(Client player)
     {
@@ -160,5 +171,27 @@ public class CAdmin : Script
             player.SendChatMessage("ma licencje 1? {0}",has);
         }
     }
+    [Command("createveh")]
+    public void createveh(Client player)
+    {
+        if (player.IsLoggedIn())
+        {
+            uint vid = Globals.Managers.vehicle.CreatePrivateVehicle(VehicleHash.Adder, player);
+            player.SendChatMessage("nowy pojazd {0}", vid);
+        }
+    }
 
+    [Command("spawnveh")]
+    public void spawnveh(Client player, uint vid)
+    {
+        Vehicle veh = Globals.Managers.vehicle.SpawnPrivateVehicle(vid, player.GetPositionAtFront(5), new Vector3(0, 0, 0));
+        if(veh != null)
+        {
+            player.SendChatMessage("stworzono pojazd {0} vid {1}", veh, veh.UID());
+        }
+        else
+        {
+            player.SendChatMessage("nie udało się stworzyć pojazdu");
+        }
+    }
 }

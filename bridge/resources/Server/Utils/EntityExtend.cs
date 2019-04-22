@@ -6,6 +6,7 @@ using System.Threading;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
+using Extend.Maths;
 
 namespace Extend.Entity
 {
@@ -29,7 +30,7 @@ namespace Extend.Entity
         {
             if(entity.HasSharedData("UID"))
             {
-                return entity.GetSharedData("UID");
+                return System.Convert.ToUInt32(entity.GetSharedData("UID"));
             }
             return null;
         }
@@ -43,5 +44,9 @@ namespace Extend.Entity
             return true;
         }
 
+        public static Vector3 GetPositionAtFront(this GTANetworkAPI.Entity entity, float distance)
+        {
+            return entity.Position.GetPointFromDistanceRotation(distance, -entity.Rotation.Z);
+        }
     }
 }

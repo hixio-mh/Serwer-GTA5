@@ -13,6 +13,7 @@ using Logic.Account;
 using Extend.Vehicle;
 using Vehicle = GTANetworkAPI.Vehicle;
 using Extend.Entity;
+using Extend.Maths;
 
 namespace Managers
 {
@@ -107,27 +108,62 @@ namespace Managers
             return null;
         }
 
+        public bool IsPrivateVehicleAlreadySpawned(uint vid)
+        {
+            return GetPrivateVehicleByUID(vid) != null;
+        }
+
         public bool Destroy(Vehicle vehicle)
         {
             if(vehicle.IsType(EVehicleType.PRIVATE))
             {
                 vehicle.Save();
             }
+            EVehicleType type = vehicle.GetVehicleType();
+            vehicles[type].Remove(vehicle);
+
             NAPI.Entity.DeleteEntity(vehicle);
             return true;
         }
+
         public uint GetLastVid()
         {
             return Convert.ToUInt32(Globals.Mysql.GetValue("select max(vid) from vehicles limit 1"));
         }
 
-        public uint CreatePrivateVehicle(VehicleHash vehicleHash, Client owner)
+        public uint CreatePrivateVehicle(VehicleHash vehicleHash, Client owner, Vector3 position = null, Vector3 rotation = null)
         {
-            Globals.Mysql.UpdateBlocking("insert into vehicles (hash,pid,firstowner)values(@p1,@p2,@p2)", vehicleHash, owner.UID());
+            if(position != null && rotation != null)
+            {
+                Globals.Mysql.UpdateBlocking("insert into vehicles (vehiclehash,pid,firstowner,position,rotation)values(@p1,@p2,@p2.@p3,@p3)", (uint)vehicleHash, owner.UID(), position.ToStr(), rotation.ToStr());
+            }
+            else
+            {
+                Globals.Mysql.UpdateBlocking("insert into vehicles (vehiclehash,pid,firstowner)values(@p1,@p2,@p2)", (uint)vehicleHash, owner.UID());
+            }
             return GetLastVid();
         }
-        public Vehicle SpawnPrivateVehicle(uint vid)
+        public Vehicle SpawnPrivateVehicle(uint vid, Vector3 position = null, Vector3 rotation = null)
         {
+            if(IsPrivateVehicleAlreadySpawned(vid))
+            {
+                return null;
+            }
+
+            Database.CVehiclesRow vehRow = Globals.Mysql.select.GetVehicleByUID(vid);
+            if (vehRow.isResult)
+            {
+                vehRow.position = position==null?vehRow.position:position;
+                vehRow.rotation = position==null?vehRow.rotation:rotation;
+                if (vehRow.position != null && vehRow.rotation != null)
+                {
+                    Vehicle veh = Create(EVehicleType.PRIVATE, vehRow.vehicleHash, vehRow.position, vehRow.rotation);
+                    veh.AssignUID(vid);
+                    veh.SetOwner(vehRow.pid);
+                    return veh;
+                }
+            }
+
             return null;
         }
     }

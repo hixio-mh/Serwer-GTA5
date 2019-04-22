@@ -226,6 +226,7 @@ namespace Database
             Finish();
             return result;
         }
+
         public List<CAccountsLicensesRow> GetAccountLicenses(uint pid)
         {
             List<CAccountsLicensesRow> results = new List<CAccountsLicensesRow>();
@@ -242,12 +243,34 @@ namespace Database
             return results;
         }
 
+        public CVehiclesRow GetVehicleByUID(uint vid)
+        {
+            CVehiclesRow result = new CVehiclesRow();
+            using (MySqlDataReader reader = RawGet("select vid,vehiclehash,pid,position,rotation,fuel,createdat,firstowner from vehicles where vid = @p1 limit 1", vid))
+            {
+                ReadRow(reader, ref result);
+                if(result.vid != 0)
+                {
+                    result.isResult = true;
+                }
+            }
+            Finish();
+            return result;
+        }
+
         private object ReadValue(MySqlDataReader reader, string columnName, Type columnType, object defaultValue)
         {
             int id = reader.GetOrdinal(columnName);
 
+
             if (reader.IsDBNull(id))
+            {
+                if (columnType == typeof(Vector3))
+                {
+                    return new Vector3(0, 0, 0);
+                }
                 return defaultValue;
+            }
 
             if (columnType == typeof(int))
             {
@@ -273,11 +296,23 @@ namespace Database
             {
                 return reader.GetDateTime(id);
             }
+            else if (columnType == typeof(VehicleHash))
+            {
+                return (VehicleHash)reader.GetUInt32(id);
+            }
             else if (columnType == typeof(Vector3))
             {
                 string strVector3 = reader.GetString(id);
                 string[] splt = strVector3.Split(",");
-                return new Vector3(System.Convert.ToInt32(splt[0]), System.Convert.ToInt32(splt[1]), System.Convert.ToInt32(splt[2]));
+                if (splt.Length == 3)
+                {
+                    return new Vector3(System.Convert.ToInt32(splt[0]), System.Convert.ToInt32(splt[1]), System.Convert.ToInt32(splt[2]));
+                }
+                else
+                {
+                    return new Vector3(0, 0, 0);
+                }
+
             }
 
             return defaultValue;
@@ -350,6 +385,8 @@ namespace Database
 
     public class CVehiclesRow
     {
+        public bool isResult = false;
+
         [MysqlColumn("vid", 0)]
         public uint vid;
 
@@ -362,10 +399,10 @@ namespace Database
         [MysqlColumn("vehiclehash", 0)]
         public VehicleHash vehicleHash;
 
-        [MysqlColumn("firstowner", 0)]
+        [MysqlColumn("position")]
         public Vector3 position;
 
-        [MysqlColumn("rotation", 0)]
+        [MysqlColumn("rotation")]
         public Vector3 rotation;
 
         [MysqlColumn("fuel", 0)]

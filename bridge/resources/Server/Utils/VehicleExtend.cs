@@ -26,7 +26,8 @@ namespace Extend.Vehicle
     {
         private readonly GTANetworkAPI.Vehicle vehicle = null;
         private EVehicleType type = EVehicleType.UNKNOWN;
-        private GTANetworkAPI.Client owner = null;
+        private Client owner = null;
+        private uint pid = 0;
         private Tuple<float, float> fuel = Tuple.Create(0.0f, 0.0f);
 
         public CVehicleExtend(GTANetworkAPI.Vehicle vehicle)
@@ -41,9 +42,24 @@ namespace Extend.Vehicle
         {
             return type;
         }
-        public GTANetworkAPI.Client Owner()
+        public Client Owner()
         {
             return owner;
+        }
+        public uint OwnerPID()
+        {
+            return pid;
+        }
+        public void SetOwner(Client owner)
+        {
+            this.owner = owner;
+            uint? tmpPid = owner.UID();
+            if(tmpPid != null)
+                pid = (uint)tmpPid;
+        }
+        public void SetOwner(uint pid)
+        {
+            this.pid = pid;
         }
     }
 
@@ -79,9 +95,21 @@ namespace Extend.Vehicle
         {
             return vehicle.GetVehicleType() == eType;
         }
-        public static GTANetworkAPI.Client Owner(this GTANetworkAPI.Vehicle vehicle)
+        public static Client Owner(this GTANetworkAPI.Vehicle vehicle)
         {
             return vehicle.GetExtension().Owner();
+        }
+        public static uint OwnerPID(this GTANetworkAPI.Vehicle vehicle)
+        {
+            return vehicle.GetExtension().OwnerPID();
+        }
+        public static void SetOwner(this GTANetworkAPI.Vehicle vehicle, Client player)
+        {
+            vehicle.GetExtension().SetOwner(player);
+        }
+        public static void SetOwner(this GTANetworkAPI.Vehicle vehicle, uint pid)
+        {
+            vehicle.GetExtension().SetOwner(pid);
         }
 
         public static bool Save(this GTANetworkAPI.Vehicle vehicle)
@@ -90,7 +118,6 @@ namespace Extend.Vehicle
             {
                 if (vehicle.UID() != null)
                 {
-
                     return true;
                 }
             }

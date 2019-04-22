@@ -7,6 +7,7 @@ using System.Threading;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
+using Extend.Maths;
 
 namespace Utils
 {
