@@ -32,6 +32,50 @@ namespace Logic.Account
             return false;
         }
     }
+    public class CAccessory
+    {
+        public int slot;
+        public int drawable;
+        public int texture;
+    }
+    public class CAccessories
+    {
+        public List<CAccessory> accessories;
+
+        public CAccessories()
+        {
+            accessories = new List<CAccessory>();
+        }
+
+        public void RebuildPlayer(Client player)
+        {
+            for(int i=0;i<20;i++)
+                player.ClearAccessory(i);
+
+            foreach(CAccessory accessory in accessories)
+            {
+                player.SetAccessories(accessory.slot, accessory.drawable, accessory.texture);
+            }
+        }
+
+        public void AddAccessory(int slot, int drawable, int texture)
+        {
+            accessories.RemoveAll(a => a.slot == slot);
+            accessories.Add(new CAccessory
+            {
+                slot = slot,
+                drawable = drawable,
+                texture = texture,
+            });
+        }
+
+        public void RemoveAccessory(int slot)
+        {
+            accessories.RemoveAll(a => a.slot == slot);
+        }
+
+    }
+
     public class CAccount
     {
         public readonly uint pid;
@@ -43,10 +87,12 @@ namespace Logic.Account
         public Client player;
         private bool licensesUpdatedFromDB = false;
         public List<CLicense> licenses = new List<CLicense>();
-        
+        public CAccessories accessories = new CAccessories();
+
         public void SetPlayer(Client player)
         {
             player.AssignUID(pid);
+            accessories.RebuildPlayer(player);
             this.player = player;
         }
 
@@ -85,7 +131,6 @@ namespace Logic.Account
         {
             UpdateLicensesFromDB();
             CLicense license = licenses.Find(i => i.id == lid);
-            Console.WriteLine("HasLicense {0} {1}",lid, license);
             if(license == null)
             {
                 return false;
@@ -134,6 +179,7 @@ namespace Logic.Account
             email = result.email;
             money = result.money;
             xp = result.xp;
+            accessories = result.accessory;
 
             Globals.Managers.account.setAccountUsed(pid, true);
         }

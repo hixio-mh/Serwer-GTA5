@@ -9,6 +9,7 @@ using GTANetworkInternals;
 using GTANetworkMethods;
 using Main;
 using Attributes;
+using Logic.Account;
 
 namespace Database
 {
@@ -190,7 +191,7 @@ namespace Database
         public CAccountsRow PlayerByUID(uint uid)
         {
             CAccountsRow result = new CAccountsRow();
-            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where pid = @p1 limit 1", uid.ToString()))
+            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp,accessory from accounts where pid = @p1 limit 1", uid.ToString()))
             {
                 if (ReadRow(reader, ref result))
                 {
@@ -203,7 +204,7 @@ namespace Database
         public CAccountsRow PlayerByLogin(string login)
         {
             CAccountsRow result = new CAccountsRow();
-            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where lower(login) = @p1 limit 1", login.ToLower()))
+            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp,accessory from accounts where lower(login) = @p1 limit 1", login.ToLower()))
             {
                 if(ReadRow(reader, ref result))
                 {
@@ -216,7 +217,7 @@ namespace Database
         public CAccountsRow PlayerByEmail(string email)
         {
             CAccountsRow result = new CAccountsRow();
-            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where lower(email) = @p1 limit 1", email.ToLower()))
+            using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp,accessory from accounts where lower(email) = @p1 limit 1", email.ToLower()))
             {
                 if (ReadRow(reader, ref result))
                 {
@@ -300,6 +301,26 @@ namespace Database
             {
                 return (VehicleHash)reader.GetUInt32(id);
             }
+            else if (columnType == typeof(CAccessories))
+            {
+                CAccessories pAccessories = new CAccessories();
+                string strAccessoriers = reader.GetString(id);
+                string[] accessories = strAccessoriers.Split(";");
+                foreach (string accessory in accessories)
+                {
+                    string[] accessorySplt = accessory.Split(",");
+                    if(accessorySplt.Length == 3)
+                    {
+                        pAccessories.accessories.Add(new CAccessory
+                        {
+                            slot = Convert.ToInt32(accessorySplt[0]),
+                            drawable = Convert.ToInt32(accessorySplt[1]),
+                            texture = Convert.ToInt32(accessorySplt[2])
+                        });
+                    }
+                }
+                return pAccessories;
+            }
             else if (columnType == typeof(Vector3))
             {
                 string strVector3 = reader.GetString(id);
@@ -366,6 +387,9 @@ namespace Database
 
         [MysqlColumn("xp",0)]
         public uint xp;
+
+        [MysqlColumn("accessory", 0)]
+        public CAccessories accessory;
     }
 
     public class CAccountsLicensesRow
