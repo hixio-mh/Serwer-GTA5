@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,6 +76,52 @@ namespace Logic.Account
 
     }
 
+    public class CClothesSet
+    {
+        public int slot;
+        public int drawable;
+        public int texture;
+    }
+    public class CClothes
+    {
+        public List<CClothesSet> clothes;
+
+        public CClothes()
+        {
+            clothes = new List<CClothesSet>();
+        }
+
+        public void RebuildPlayer(Client player)
+        {
+            player.SetDefaultClothes();
+
+            for (int i=0;i<20;i++)
+                player.ClearAccessory(i);
+
+            foreach(CClothesSet clothesSet in clothes)
+            {
+                player.SetClothes(clothesSet.slot, clothesSet.drawable, clothesSet.texture);
+            }
+        }
+
+        public void AddClothes(int slot, int drawable, int texture)
+        {
+            clothes.RemoveAll(a => a.slot == slot);
+            clothes.Add(new CClothesSet
+            {
+                slot = slot,
+                drawable = drawable,
+                texture = texture,
+            });
+        }
+
+        public void RemoveClothes(int slot)
+        {
+            clothes.RemoveAll(a => a.slot == slot);
+        }
+
+    }
+
     public class CAccount
     {
         public readonly uint pid;
@@ -88,11 +134,14 @@ namespace Logic.Account
         private bool licensesUpdatedFromDB = false;
         public List<CLicense> licenses = new List<CLicense>();
         public CAccessories accessories = new CAccessories();
+        public CClothes clothes = new CClothes();
 
         public void SetPlayer(Client player)
         {
             player.AssignUID(pid);
             accessories.RebuildPlayer(player);
+            clothes.RebuildPlayer(player);
+
             this.player = player;
         }
 
@@ -180,6 +229,7 @@ namespace Logic.Account
             money = result.money;
             xp = result.xp;
             accessories = result.accessory;
+            clothes = result.clothes;
 
             Globals.Managers.account.setAccountUsed(pid, true);
         }
