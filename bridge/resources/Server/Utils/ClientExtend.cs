@@ -11,24 +11,27 @@ namespace Extend.Client
 {
     public static class CClientExtension
     {
-        private static CAccount account;
-        public static bool SetAccount(this GTANetworkAPI.Client player, CAccount playerAccount)
+        public static void SetAccount(this GTANetworkAPI.Client player, CAccount playerAccount)
         {
-            if(account == null)
+            player.SetData("extension", playerAccount);
+        }
+
+        public static CAccount GetExtension(this GTANetworkAPI.Client player)
+        {
+            if (!player.HasData("extension"))
             {
-                account = playerAccount;
-                return true;
+                return null;
             }
-            return false;
+            return player.GetData("extension");
         }
 
         public static bool IsLoggedIn(this GTANetworkAPI.Client player)
         {
-            return account != null;
+            return player.Account() != null;
         }
         public static CAccount Account(this GTANetworkAPI.Client player)
         {
-            return account;
+            return player.GetExtension();
         }
 
         public static void SendChatMessage(this GTANetworkAPI.Client player, string message, params object[] format)

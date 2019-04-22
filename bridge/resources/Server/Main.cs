@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Reflection;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
@@ -12,9 +13,12 @@ using Utils;
 using Extend.Vehicle;
 using Vehicle = GTANetworkAPI.Vehicle;
 using Data.Vehicle;
+//using Newtonsoft.Json;
+
 
 namespace Main
 {
+    using MySql.Data.MySqlClient;
     public static class Globals
     {
         static public CMain Main;
@@ -36,9 +40,16 @@ namespace Main
             Globals.Utils = new CUtils();
             VehicleData.InitiliazeDefault();
 
-            Vehicle vehA = Globals.Managers.vehicle.Create(EVehicleType.UNKNOWN, VehicleHash.Adder, new Vector3(-414.72, 1127.23, 325.90), new Vector3(0,0,0));
-            Vehicle vehB = Globals.Managers.vehicle.Create(EVehicleType.SALON, VehicleHash.Adder, new Vector3(-404.72, 1127.23, 325.90), new Vector3(0,0,0));
-            Console.WriteLine("vehicle type {0} {1}", vehA.IsType(EVehicleType.SALON), vehB.IsType(EVehicleType.SALON));
+            //Vehicle vehA = Globals.Managers.vehicle.Create(EVehicleType.UNKNOWN, VehicleHash.Adder, new Vector3(-414.72, 1127.23, 325.90), new Vector3(0,0,0));
+            //Vehicle vehB = Globals.Managers.vehicle.Create(EVehicleType.SALON, VehicleHash.Adder, new Vector3(-404.72, 1127.23, 325.90), new Vector3(0,0,0));
+            //Console.WriteLine("vehicle type {0} {1}", vehA.IsType(EVehicleType.SALON), vehB.IsType(EVehicleType.SALON));
+
+            /*using (MySqlDataReader reader = Globals.Mysql.RawGet("select pid,login,pass,email,money,xp from accounts where pid = 5"))
+            {
+                Database.CAccountsRow row = new Database.CAccountsRow();
+                Globals.Mysql.select.ReadRow(reader, ref row);
+                Console.WriteLine("{0}",JsonConvert.SerializeObject(row));
+            }*/
         }
 
         [ServerEvent(Event.ResourceStart)]

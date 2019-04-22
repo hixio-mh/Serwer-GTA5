@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="BCrypt" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,9 @@
     </Reference>
     <Reference Include="System.Reflection">
       <HintPath>..\..\runtime\System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>..\..\runtime\System.Runtime.Serialization.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encoding.CodePages">
       <HintPath>..\..\runtime\System.Text.Encoding.CodePages.dll</HintPath>

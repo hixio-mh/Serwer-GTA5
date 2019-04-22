@@ -6,6 +6,7 @@ using System.Threading;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
+using Extend.Entity;
 
 namespace Extend.Vehicle
 {
@@ -28,7 +29,6 @@ namespace Extend.Vehicle
         private GTANetworkAPI.Client owner = null;
         private Tuple<float, float> fuel = Tuple.Create(0.0f, 0.0f);
 
-        private uint vid = 0;
         public CVehicleExtend(GTANetworkAPI.Vehicle vehicle)
         {
             this.vehicle = vehicle;
@@ -40,6 +40,10 @@ namespace Extend.Vehicle
         public EVehicleType GetVehicleType()
         {
             return type;
+        }
+        public GTANetworkAPI.Client Owner()
+        {
+            return owner;
         }
     }
 
@@ -57,6 +61,10 @@ namespace Extend.Vehicle
         
         public static CVehicleExtend GetExtension(this GTANetworkAPI.Vehicle vehicle)
         {
+            if(!vehicle.HasData("extension"))
+            {
+                vehicle.AddExtension();
+            }
             return vehicle.GetData("extension");
         }
         public static void SetVehicleType(this GTANetworkAPI.Vehicle vehicle, EVehicleType newType)
@@ -70,6 +78,23 @@ namespace Extend.Vehicle
         public static bool IsType(this GTANetworkAPI.Vehicle vehicle, EVehicleType eType)
         {
             return vehicle.GetVehicleType() == eType;
+        }
+        public static GTANetworkAPI.Client Owner(this GTANetworkAPI.Vehicle vehicle)
+        {
+            return vehicle.GetExtension().Owner();
+        }
+
+        public static bool Save(this GTANetworkAPI.Vehicle vehicle)
+        {
+            if(vehicle.IsType(EVehicleType.PRIVATE))
+            {
+                if (vehicle.UID() != null)
+                {
+
+                    return true;
+                }
+            }
+            return false;
         }
 
     }

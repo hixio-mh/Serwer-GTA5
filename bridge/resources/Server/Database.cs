@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Reflection;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
 using Main;
+using Attributes;
 
 namespace Database
 {
     using MySql.Data.MySqlClient;
     using MySql;
+    using Extend.MysqlReader;
 
     public class CMysql
     {
@@ -151,29 +154,10 @@ namespace Database
     }
     public class CSelect : CMysql
     {
-        public CSelect()
-        {
-        }
+        public CSelect(){}
 
-        private void readPlayerResult(MySqlDataReader reader, ref CPlayersResult playersResult)
+        private void readAccountLicenseResult(MySqlDataReader reader, ref CAccountsLicensesRow accountLicenseResult)
         {
-            if (reader.Read())
-            {
-                playersResult.isResult = true;
-                playersResult.pid = reader.GetUInt32("pid");
-                playersResult.login = reader.GetString("login");
-                playersResult.pass = reader.GetString("pass");
-                playersResult.email = reader.GetString("email");
-                playersResult.money = reader.GetInt64("money");
-                playersResult.xp = reader.GetUInt32("xp");
-            }
-            else
-                playersResult.isResult = false;
-        }
-
-        private void readAccountLicenseResult(MySqlDataReader reader, ref CAccountLicenseResult accountLicenseResult)
-        {
-            accountLicenseResult.isResult = true;
             accountLicenseResult.pid = reader.GetUInt32("pid");
             accountLicenseResult.lid = reader.GetByte("lid");
             if(!reader.IsDBNull(2))
@@ -183,83 +167,211 @@ namespace Database
                 accountLicenseResult.suspendedreason = reader.GetString("suspendedreason");
 
         }
-        private void readAccountLicenseResults(MySqlDataReader reader, ref List<CAccountLicenseResult> accountLicenseResults)
+        private void readAccountLicenseResults(MySqlDataReader reader, ref List<CAccountsLicensesRow> accountLicenseResults)
         {
             while (reader.Read())
             {
-                CAccountLicenseResult license = new CAccountLicenseResult();
+                CAccountsLicensesRow license = new CAccountsLicensesRow();
                 readAccountLicenseResult(reader, ref license);
                 accountLicenseResults.Add(license);
             }
         }
-
-        public CPlayersResult PlayerByUID(uint uid)
+        private void readVehicleResults(MySqlDataReader reader, ref CVehiclesRow accountLicenseResults)
         {
-            CPlayersResult result = new CPlayersResult();
+            if (reader.Read())
+            {
+                accountLicenseResults.vid = reader.GetUInt32("vid");
+                accountLicenseResults.pid = reader.GetUInt32("pid");
+                accountLicenseResults.firstOwner = reader.GetUInt32("firstOwner");
+                accountLicenseResults.vehicleHash = (VehicleHash)reader.GetUInt32("hash");
+            }
+        }
+
+        public CAccountsRow PlayerByUID(uint uid)
+        {
+            CAccountsRow result = new CAccountsRow();
             using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where pid = @p1 limit 1", uid.ToString()))
             {
-                readPlayerResult(reader, ref result);
+                if (ReadRow(reader, ref result))
+                {
+                    result.isResult = true;
+                }
             }
             Finish();
             return result;
         }
-        public CPlayersResult PlayerByLogin(string login)
+        public CAccountsRow PlayerByLogin(string login)
         {
-            CPlayersResult result = new CPlayersResult();
+            CAccountsRow result = new CAccountsRow();
             using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where lower(login) = @p1 limit 1", login.ToLower()))
             {
-                readPlayerResult(reader, ref result);
+                if(ReadRow(reader, ref result))
+                {
+                    result.isResult = true;
+                }
             }
             Finish();
             return result;
         }
-        public CPlayersResult PlayerByEmail(string email)
+        public CAccountsRow PlayerByEmail(string email)
         {
-            CPlayersResult result = new CPlayersResult();
+            CAccountsRow result = new CAccountsRow();
             using (MySqlDataReader reader = RawGet("select pid,login,pass,email,money,xp from accounts where lower(email) = @p1 limit 1", email.ToLower()))
             {
-                readPlayerResult(reader, ref result);
+                if (ReadRow(reader, ref result))
+                {
+                    result.isResult = true;
+                }
             }
             Finish();
             return result;
         }
-        public List<CAccountLicenseResult> GetAccountLicenses(uint pid)
+        public List<CAccountsLicensesRow> GetAccountLicenses(uint pid)
         {
-            List<CAccountLicenseResult> licenses = new List<CAccountLicenseResult>();
+            List<CAccountsLicensesRow> results = new List<CAccountsLicensesRow>();
             using (MySqlDataReader reader = RawGet("select pid,lid,suspended,suspendedreason from accounts_licenses where pid = @p1", pid))
             {
-                readAccountLicenseResults(reader, ref licenses);
+                while(reader.Read())
+                {
+                    CAccountsLicensesRow result = new CAccountsLicensesRow();
+                    ReadRow(reader, ref result, true);
+                    results.Add(result);
+                }
             }
             Finish();
-            return licenses;
+            return results;
+        }
+
+        private object ReadValue(MySqlDataReader reader, string columnName, Type columnType, object defaultValue)
+        {
+            int id = reader.GetOrdinal(columnName);
+
+            if (reader.IsDBNull(id))
+                return defaultValue;
+
+            if (columnType == typeof(int))
+            {
+                return reader.GetInt32(id);
+            }
+            else if (columnType == typeof(uint))
+            {
+                return reader.GetUInt32(id);
+            }
+            else if (columnType == typeof(long))
+            {
+                return reader.GetInt64(id);
+            }
+            else if (columnType == typeof(byte))
+            {
+                return reader.GetByte(id);
+            }
+            else if (columnType == typeof(string))
+            {
+                return reader.GetString(id);
+            }
+            else if (columnType == typeof(DateTime))
+            {
+                return reader.GetDateTime(id);
+            }
+            else if (columnType == typeof(Vector3))
+            {
+                string strVector3 = reader.GetString(id);
+                string[] splt = strVector3.Split(",");
+                return new Vector3(System.Convert.ToInt32(splt[0]), System.Convert.ToInt32(splt[1]), System.Convert.ToInt32(splt[2]));
+            }
+
+            return defaultValue;
+        }
+        public bool ReadRow<T>(MySqlDataReader reader, ref T row, bool skipRead = false)
+        {
+            if (!skipRead)
+            {
+                if (!reader.Read())
+                    return false;
+            }
+
+            FieldInfo[] properties = row.GetType().GetFields();
+
+            foreach (FieldInfo property in properties)
+            {
+                MysqlColumn column = property.GetCustomAttribute<MysqlColumn>();
+                if (column != null)
+                {
+                    Type fieldType = property.FieldType;
+                    object result = ReadValue(reader, column.name, fieldType, column.defaultValue);
+                    if(result != null)
+                    {
+                        property.SetValue(row, Convert.ChangeType(result, fieldType));
+                    }
+                }
+            }
+            return true;
         }
     }
 
-    public class CPlayersResult
+
+    public class CAccountsRow
     {
-        public bool isResult;
+        public bool isResult = false;
+
+        [MysqlColumn("pid",0)]
         public uint pid;
+
+        [MysqlColumn("login","")]
         public string login;
+
+        [MysqlColumn("pass","")]
         public string pass;
+
+        [MysqlColumn("email","")]
         public string email;
+
+        [MysqlColumn("money",0)]
         public long money;
+
+        [MysqlColumn("xp",0)]
         public uint xp;
-        public CPlayersResult()
-        {
-            isResult = false;
-        }
     }
 
-    public class CAccountLicenseResult
+    public class CAccountsLicensesRow
     {
-        public bool isResult;
+        [MysqlColumn("pid", 0)]
         public uint pid;
+
+        [MysqlColumn("lid", 0)]
         public byte lid;
+
+        [MysqlColumn("suspended", null)]
         public DateTime suspended;
+
+        [MysqlColumn("suspendedreason", 0)]
         public string suspendedreason;
-        public CAccountLicenseResult()
-        {
-            isResult = false;
-        }
+    }
+
+    public class CVehiclesRow
+    {
+        [MysqlColumn("vid", 0)]
+        public uint vid;
+
+        [MysqlColumn("pid", 0)]
+        public uint pid;
+
+        [MysqlColumn("firstowner", 0)]
+        public uint firstOwner;
+
+        [MysqlColumn("vehiclehash", 0)]
+        public VehicleHash vehicleHash;
+
+        [MysqlColumn("firstowner", 0)]
+        public Vector3 position;
+
+        [MysqlColumn("rotation", 0)]
+        public Vector3 rotation;
+
+        [MysqlColumn("fuel", 0)]
+        public float fuel;
+
+        [MysqlColumn("createdat", 0)]
+        public DateTime createdAt;
     }
 }

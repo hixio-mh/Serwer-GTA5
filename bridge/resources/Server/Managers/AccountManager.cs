@@ -84,7 +84,7 @@ namespace Managers
 
         public uint CheckCredentials(string loginOrEmail, string pass)
         {
-            CPlayersResult resultLogin = Globals.Mysql.select.PlayerByLogin(loginOrEmail);
+            CAccountsRow resultLogin = Globals.Mysql.select.PlayerByLogin(loginOrEmail);
             if(resultLogin.isResult)
             {
                 if(BCryptHelper.CheckPassword(pass, resultLogin.pass))

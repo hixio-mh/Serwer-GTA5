@@ -12,6 +12,7 @@ using Main;
 using Logic.Account;
 using Extend.Vehicle;
 using Vehicle = GTANetworkAPI.Vehicle;
+using Extend.Entity;
 
 namespace Managers
 {
@@ -94,9 +95,40 @@ namespace Managers
             return vehicle;
         }
 
+        public Vehicle GetPrivateVehicleByUID(uint vid)
+        {
+            foreach(Vehicle vehicle in vehicles[EVehicleType.PRIVATE])
+            {
+                if(vehicle.UID() == vid)
+                {
+                    return vehicle;
+                }
+            }
+            return null;
+        }
+
         public bool Destroy(Vehicle vehicle)
         {
+            if(vehicle.IsType(EVehicleType.PRIVATE))
+            {
+                vehicle.Save();
+            }
+            NAPI.Entity.DeleteEntity(vehicle);
             return true;
+        }
+        public uint GetLastVid()
+        {
+            return Convert.ToUInt32(Globals.Mysql.GetValue("select max(vid) from vehicles limit 1"));
+        }
+
+        public uint CreatePrivateVehicle(VehicleHash vehicleHash, Client owner)
+        {
+            Globals.Mysql.UpdateBlocking("insert into vehicles (hash,pid,firstowner)values(@p1,@p2,@p2)", vehicleHash, owner.UID());
+            return GetLastVid();
+        }
+        public Vehicle SpawnPrivateVehicle(uint vid)
+        {
+            return null;
         }
     }
 }

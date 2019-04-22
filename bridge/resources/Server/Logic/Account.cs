@@ -12,6 +12,9 @@ using Managers;
 using Database;
 using Logger;
 using Data.Account;
+using Extend.Vehicle;
+using Extend.Entity;
+using Vehicle = GTANetworkAPI.Vehicle;
 
 namespace Logic.Account
 {
@@ -22,7 +25,7 @@ namespace Logic.Account
         public string reason;
         public bool isSuspended()
         {
-            if (suspended > DateTime.Now)
+            if (suspended != null && suspended > DateTime.Now)
             {
                 return true;
             }
@@ -43,6 +46,7 @@ namespace Logic.Account
         
         public void SetPlayer(Client player)
         {
+            player.AssignUID(pid);
             this.player = player;
         }
 
@@ -52,8 +56,8 @@ namespace Logic.Account
             {
                 licensesUpdatedFromDB = true;
                 licenses.Clear();
-                List<CAccountLicenseResult> dbResult = Globals.Mysql.select.GetAccountLicenses(pid);
-                foreach(CAccountLicenseResult result in dbResult)
+                List<CAccountsLicensesRow> dbResult = Globals.Mysql.select.GetAccountLicenses(pid);
+                foreach(CAccountsLicensesRow result in dbResult)
                 {
                     licenses.Add(new CLicense {
                         id = result.lid,
@@ -107,10 +111,23 @@ namespace Logic.Account
             UpdateLicensesFromDB(true);
             return true;
         }
+        public List<Vehicle> GetPrivateVehicles()
+        {
+            List<Vehicle> playerVehicles = new List<Vehicle>();
+            foreach (Vehicle vehicle in Globals.Managers.vehicle.vehicles[EVehicleType.PRIVATE])
+            {
+                if (vehicle.Owner() == player)
+                {
+                    playerVehicles.Add(vehicle);
+                }
+            }
+            return playerVehicles;
+        }
+
 
         public CAccount(uint pid)
         {
-            CPlayersResult result = Globals.Mysql.select.PlayerByUID(pid);
+            CAccountsRow result = Globals.Mysql.select.PlayerByUID(pid);
 
             this.pid = result.pid;
             login = result.login;

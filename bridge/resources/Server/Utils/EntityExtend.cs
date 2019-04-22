@@ -25,5 +25,23 @@ namespace Extend.Entity
             return null;
         }
 
+        public static uint? UID(this GTANetworkAPI.Entity entity)
+        {
+            if(entity.HasSharedData("UID"))
+            {
+                return entity.GetSharedData("UID");
+            }
+            return null;
+        }
+        public static bool AssignUID(this GTANetworkAPI.Entity entity, uint uid)
+        {
+            if(entity.HasSharedData("UID"))
+            {
+                return false;
+            }
+            entity.SetSharedData("UID", uid);
+            return true;
+        }
+
     }
 }
