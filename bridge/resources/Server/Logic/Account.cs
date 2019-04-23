@@ -12,7 +12,7 @@ using Managers;
 using Database;
 using Logger;
 using Data.Account;
-using Extend.Vehicle;
+using Extend.Vehicles;
 using Extend.Entity;
 using Vehicle = GTANetworkAPI.Vehicle;
 

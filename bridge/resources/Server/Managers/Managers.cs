@@ -13,10 +13,12 @@ namespace Managers
     {
         public CAccountManager account;
         public CVehicleManager vehicle;
+        public CSpawnManager spawn;
         public CManagers()
         {
             account = new CAccountManager();
             vehicle = new CVehicleManager();
+            spawn = new CSpawnManager();
         }
     }
 }

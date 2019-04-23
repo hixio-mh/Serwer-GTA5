@@ -15,4 +15,14 @@ namespace Attributes
             this.defaultValue = defaultValue;
         }
     }
+
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+    public class MysqlTable : Attribute
+    {
+        public string name;
+        public MysqlTable(string name)
+        {
+            this.name = name;
+        }
+    }
 }

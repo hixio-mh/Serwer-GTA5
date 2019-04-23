@@ -10,7 +10,7 @@ using DevOne.Security.Cryptography.BCrypt;
 using Database;
 using Main;
 using Logic.Account;
-using Extend.Vehicle;
+using Extend.Vehicles;
 using Vehicle = GTANetworkAPI.Vehicle;
 using Extend.Entity;
 using Extend.Maths;

@@ -10,6 +10,7 @@ using GTANetworkMethods;
 using Main;
 using Attributes;
 using Logic.Account;
+using Utils;
 
 namespace Database
 {
@@ -17,20 +18,80 @@ namespace Database
     using MySql;
     using Extend.MysqlReader;
 
+    public class CMysqlTable
+    {
+        public string nameNoPrefix;
+        public string name;
+        private List<string> columns;
+        public CMysqlTable(string name)
+        {
+            columns = new List<string>();
+            this.nameNoPrefix = name;
+            this.name = name;
+        }
+
+        public void AddColumn(string column)
+        {
+            columns.Add(column);
+        }
+        public List<string> GetColumns()
+        {
+            return columns;
+        }
+        public string GetColumnsAsString()
+        {
+            return string.Join(",",columns);
+        }
+    }
+
     public class CMysql
     {
         public readonly string strConnection = "server=87.98.236.134;uid=db_42756;password=UuUMYlaU8Pu3;database=db_42756;port=3306;CharSet=utf8;";
         private MySqlConnection pConnection;
-        private int RecordsAffected = 0;
         public CSelect select;
+        public List<CMysqlTable> tables = new List<CMysqlTable>();
+
         public long LastInsertedID = 0;
+        public string tablePrefix = "";
+        private int RecordsAffected = 0;
 
         public static CMysql initialize()
         {
             CMysql pMysql = new CMysql();
             pMysql.select = new CSelect();
+
+            Type[] typelist = CUtils.GetTypesInNamespace(Assembly.GetExecutingAssembly(), "Database");
+            for (int i = 0; i < typelist.Length; i++)
+            {
+                Type type = typelist[i];
+                object[] attributes = type.GetCustomAttributes(false); // @todo Zrobić to lepiej
+                if (attributes.Length == 1)
+                {
+                    MysqlTable table = (MysqlTable)attributes[0];
+                    if(table == null)
+                    {
+                        continue;
+                    }
+
+                    CMysqlTable pTable = new CMysqlTable(table.name);
+
+                    FieldInfo[] properties = type.GetFields();
+
+                    foreach (FieldInfo property in properties)
+                    {
+                        MysqlColumn column = property.GetCustomAttribute<MysqlColumn>();
+                        if (column != null)
+                        {
+                            pTable.AddColumn(column.name);
+                        }
+                    }
+                    pMysql.tables.Add(pTable);
+                }
+            }
+
             return pMysql;
         }
+
         protected CMysql()
         {
             pConnection = new MySqlConnection(strConnection);
@@ -40,6 +101,7 @@ namespace Database
         {
             pConnection.Close();
         }
+
         public MySqlCommand Prepare(string strQuery, Dictionary<string, object> parameters = null)
         {
             if (parameters == null) parameters = new Dictionary<string, object>();
@@ -61,6 +123,7 @@ namespace Database
             pConnection.Close();
             return true;
         }
+
         public bool Update(string strQuery, params object[] parametrsList)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -109,6 +172,7 @@ namespace Database
             pConnection.Open();
             return command.ExecuteReader();
         }
+
         public MySqlDataReader RawGet(string strQuery, params object[] parametrsList)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -121,6 +185,7 @@ namespace Database
             pConnection.Open();
             return command.ExecuteReader();
         }
+
         public List<object[]> Get(string strQuery, Dictionary<string,object> parameters = null)
         {
             List<object[]> result;
@@ -137,6 +202,68 @@ namespace Database
             }
             pConnection.Close();
             return result;
+        }
+
+        public CMysqlTable GetTableByClass<T>() where T : MysqlRow
+        {
+            object[] attributes = typeof(T).GetCustomAttributes(false); // @todo Zrobić to lepiej
+            if (attributes.Length == 1)
+            {
+                MysqlTable table = (MysqlTable)attributes[0];
+                if (table != null)
+                {
+                    foreach(CMysqlTable mysqlTable in tables)
+                    {
+                        if(mysqlTable.nameNoPrefix == table.name)
+                        {
+                            return mysqlTable;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public void GetTableRow<T>(ref T row, string whereQuery, params object[] parametrsList) where T : MysqlRow
+        {
+            CMysqlTable mysqlTable = GetTableByClass<T>();
+
+            if (mysqlTable == null) return;
+
+            using (MySqlDataReader reader = RawGet("select " + mysqlTable.GetColumnsAsString() + " from " + mysqlTable.name + " where " + whereQuery + " limit 1", parametrsList))
+            {
+                if(reader.HasRows)
+                {
+                    Globals.Mysql.select.ReadRow(reader, ref row);
+                    row.isResult = true;
+                }
+            }
+            Finish();
+        }
+        public void GetTableRows<T>(ref List<T> rows, string whereQuery = "", params object[] parametrsList) where T : MysqlRow
+        {
+            CMysqlTable mysqlTable = GetTableByClass<T>();
+
+            if (mysqlTable == null) return;
+
+            if(whereQuery != "")
+            {
+                whereQuery = "where " + whereQuery;
+            }
+            using (MySqlDataReader reader = RawGet("select " + mysqlTable.GetColumnsAsString() + " from " + mysqlTable.name + whereQuery, parametrsList))
+            {
+                if(reader.HasRows)
+                {
+                    while(reader.Read())
+                    {
+                        T row = (T)Activator.CreateInstance(typeof(T));
+                        Globals.Mysql.select.ReadRow(reader, ref row, true);
+                        row.isResult = true;
+                        rows.Add(row);
+                    }
+                }
+            }
+            Finish();
         }
 
         public object GetValue(string strQuery, Dictionary<string,object> parameters = null)
@@ -277,6 +404,10 @@ namespace Database
             {
                 return reader.GetInt32(id);
             }
+            else if (columnType == typeof(float))
+            {
+                return reader.GetFloat(id);
+            }
             else if (columnType == typeof(uint))
             {
                 return reader.GetUInt32(id);
@@ -347,7 +478,7 @@ namespace Database
                 string[] splt = strVector3.Split(",");
                 if (splt.Length == 3)
                 {
-                    return new Vector3(System.Convert.ToInt32(splt[0]), System.Convert.ToInt32(splt[1]), System.Convert.ToInt32(splt[2]));
+                    return new Vector3(System.Convert.ToDouble(splt[0]), System.Convert.ToDouble(splt[1]), System.Convert.ToDouble(splt[2]));
                 }
                 else
                 {
@@ -385,10 +516,14 @@ namespace Database
         }
     }
 
-
-    public class CAccountsRow
+    public class MysqlRow
     {
         public bool isResult = false;
+    }
+
+    [MysqlTable("accounts")]
+    public class CAccountsRow : MysqlRow
+    {
 
         [MysqlColumn("pid",0)]
         public uint pid;
@@ -415,7 +550,8 @@ namespace Database
         public CClothes clothes;
     }
 
-    public class CAccountsLicensesRow
+    [MysqlTable("accounts_licenses")]
+    public class CAccountsLicensesRow : MysqlRow
     {
         [MysqlColumn("pid", 0)]
         public uint pid;
@@ -430,9 +566,9 @@ namespace Database
         public string suspendedreason;
     }
 
-    public class CVehiclesRow
+    [MysqlTable("vehicles")]
+    public class CVehiclesRow : MysqlRow
     {
-        public bool isResult = false;
 
         [MysqlColumn("vid", 0)]
         public uint vid;
@@ -457,5 +593,15 @@ namespace Database
 
         [MysqlColumn("createdat", 0)]
         public DateTime createdAt;
+    }
+
+    [MysqlTable("spawnpoints")]
+    public class CSpawnRow : MysqlRow
+    {
+        [MysqlColumn("position")]
+        public Vector3 position;
+
+        [MysqlColumn("rotation", 0)]
+        public float rotation;
     }
 }

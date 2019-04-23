@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading;
 using GTANetworkAPI;
 using GTANetworkInternals;
-using GTANetworkMethods;
 using Extend.Entity;
 
-namespace Extend.Vehicle
+namespace Extend.Vehicles
 {
     public enum EVehicleType
     {
@@ -24,7 +23,7 @@ namespace Extend.Vehicle
 
     public class CVehicleExtend
     {
-        private readonly GTANetworkAPI.Vehicle vehicle = null;
+        private readonly Vehicle vehicle = null;
         private EVehicleType type = EVehicleType.UNKNOWN;
         private Client owner = null;
         private uint pid = 0;
@@ -54,11 +53,15 @@ namespace Extend.Vehicle
         {
             this.owner = owner;
             uint? tmpPid = owner.UID();
-            if(tmpPid != null)
+            if (tmpPid != null)
+            {
                 pid = (uint)tmpPid;
+                vehicle.SetSharedData("owner", pid);
+            }
         }
         public void SetOwner(uint pid)
         {
+            vehicle.SetSharedData("owner", pid);
             this.pid = pid;
         }
     }
