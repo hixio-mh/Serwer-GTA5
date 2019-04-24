@@ -16,6 +16,8 @@ namespace Data.Account
         {
             ALL,
             MONEY,
+            APPEARANCE,
+            XP,
         }
 
     }

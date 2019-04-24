@@ -29,6 +29,24 @@ namespace Extend.Clients
         {
             return player.Account() != null;
         }
+
+        public static Vector3 GetLastPosition(this GTANetworkAPI.Client player)
+        {
+            if(player.Account() == null)
+            {
+                return null;
+            }
+            return player.Account().GetLastPosition();
+        }
+
+        public static bool Save(this GTANetworkAPI.Client player)
+        {
+            if(player.Account() == null)
+            {
+                return false;
+            }
+            return player.Account().Save();
+        }
         public static CAccount Account(this GTANetworkAPI.Client player)
         {
             return player.GetExtension();

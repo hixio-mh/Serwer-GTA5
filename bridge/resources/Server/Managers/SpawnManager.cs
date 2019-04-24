@@ -63,9 +63,18 @@ namespace Managers
             player.Health = 100;
             player.Rotation.Z = rotation;
         }
-        public void SpawnPlayer(Client player)
+        public void SpawnPlayer(Client player, bool lastPosition = false)
         {
             CSpawnRow spawn = GetRandom();
+            if ( lastPosition )
+            {
+                Vector3 lastPos = player.GetLastPosition();
+                if (lastPos != null)
+                {
+                    spawn.position = lastPos;
+                    spawn.rotation = 0;
+                }
+            }
             SpawnPlayer(player, spawn.position, spawn.rotation);
         }
     }

@@ -14,6 +14,7 @@ using Logger;
 using Data.Account;
 using Extend.Vehicles;
 using Extend.Entity;
+using Extend.Maths;
 using Vehicle = GTANetworkAPI.Vehicle;
 
 namespace Logic.Account
@@ -73,6 +74,22 @@ namespace Logic.Account
         {
             accessories.RemoveAll(a => a.slot == slot);
         }
+        public string GetSaveString()
+        {
+            List<string> accessoryAsStr = new List<string>();
+            foreach (CAccessory accessory in accessories)
+            {
+                accessoryAsStr.Add($"{accessory.slot},{accessory.drawable},{accessory.texture}");
+            }
+            if (accessoryAsStr.Count == 0)
+            {
+                return "";
+            }
+            else
+            {
+                return String.Join(";", accessoryAsStr);
+            }
+        }
 
     }
 
@@ -120,6 +137,23 @@ namespace Logic.Account
             clothes.RemoveAll(a => a.slot == slot);
         }
 
+        public string GetSaveString()
+        {
+            List<string> setsAsStr = new List<string>();
+            foreach(CClothesSet clothesSet in clothes)
+            {
+                setsAsStr.Add($"{clothesSet.slot},{clothesSet.drawable},{clothesSet.texture}");
+            }
+            if (setsAsStr.Count == 0)
+            {
+                return "";
+            }
+            else
+            {
+                return String.Join(";", setsAsStr);
+            }
+        }
+
     }
 
     public class CAccount
@@ -135,6 +169,7 @@ namespace Logic.Account
         public List<CLicense> licenses = new List<CLicense>();
         public CAccessories accessories = new CAccessories();
         public CClothes clothes = new CClothes();
+        public Vector3 lastPosition = null;
 
         public void SetPlayer(Client player)
         {
@@ -205,6 +240,7 @@ namespace Logic.Account
             UpdateLicensesFromDB(true);
             return true;
         }
+
         public List<Vehicle> GetPrivateVehicles()
         {
             List<Vehicle> playerVehicles = new List<Vehicle>();
@@ -218,7 +254,6 @@ namespace Logic.Account
             return playerVehicles;
         }
 
-
         public CAccount(uint pid)
         {
             CAccountsRow result = Globals.Mysql.select.PlayerByUID(pid);
@@ -230,9 +265,13 @@ namespace Logic.Account
             xp = result.xp;
             accessories = result.accessory;
             clothes = result.clothes;
-
+            if(result.lastPosition.Length() > 1)
+            {
+                lastPosition = result.lastPosition;
+            }
             Globals.Managers.account.setAccountUsed(pid, true);
         }
+
         ~CAccount()
         {
             Globals.Managers.account.setAccountUsed(pid, false);
@@ -244,12 +283,14 @@ namespace Logic.Account
             money += amount;
             Save(CAccountData.ESave.MONEY);
         }
+
         public void TakeMoney(long amount, string description)
         {
             CLogger.LogMoney(pid, money, money - amount, description);
             money -= amount;
             Save(CAccountData.ESave.MONEY);
         }
+
         public void SetMoney(long amount, string description)
         {
             CLogger.LogMoney(pid, money, amount, description);
@@ -257,16 +298,28 @@ namespace Logic.Account
             Save(CAccountData.ESave.MONEY);
         }
 
+        public Vector3 GetLastPosition()
+        {
+            return lastPosition;
+        }
+
         public bool Save(CAccountData.ESave save = CAccountData.ESave.ALL)
         {
             switch(save)
             {
                 case CAccountData.ESave.ALL:
-                    //Globals.gMysql.Update(""); @Todo
-
+                    Globals.Mysql.Update("update accounts set money = @p2, health = @p3, xp = @p4, clothes = @p5, accessory = @p6, lastposition = @p7 where pid = @p1 limit 1",
+                        pid, money, player.Health, xp, clothes.GetSaveString(), accessories.GetSaveString(), player.Position.ToStr());
+                    return true;
+                case CAccountData.ESave.APPEARANCE:
+                    Globals.Mysql.Update("update accounts set clothes = @p2, accessory = @p3 where pid = @p1 limit 1",
+                        pid, clothes.GetSaveString(), accessories.GetSaveString());
                     return true;
                 case CAccountData.ESave.MONEY:
                     Globals.Mysql.Update("update accounts set money = @p1 where pid = @p2 limit 1", money, pid);
+                    return true;
+                case CAccountData.ESave.XP:
+                    Globals.Mysql.Update("update accounts set xp = @p1 where pid = @p2 limit 1", xp, pid);
                     return true;
             }
             return false;

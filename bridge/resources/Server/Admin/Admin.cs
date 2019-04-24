@@ -8,6 +8,7 @@ using System;
 using Database;
 using Newtonsoft.Json;
 using Extend.Maths;
+using Extend.Clients;
 
 public class CAdmin : Script
 {
@@ -109,6 +110,7 @@ public class CAdmin : Script
             return;
         }
         Globals.Managers.account.LogIn(player, pid);
+        Globals.Managers.spawn.SpawnPlayer(player, true);
         player.SendChatMessage("Zalogowano pomyślnie, id konta {0}",player.Account().pid);
     }
 
@@ -147,11 +149,11 @@ public class CAdmin : Script
     }
 
 
-[Command("test")]
-public void test(Client player, float distance)
-{
-    NAPI.Marker.CreateMarker(1, player.GetPositionAtFront(distance), new Vector3(), new Vector3(), 2, 255, 0,0, false, uint.MaxValue);
-}
+    [Command("test")]
+    public void test(Client player, float distance)
+    {
+        NAPI.Marker.CreateMarker(1, player.GetPositionAtFront(distance), new Vector3(), new Vector3(), 2, 255, 0,0, false, uint.MaxValue);
+    }
 
     [Command("licgiv")]
     public void licgiv(Client player)
@@ -193,5 +195,11 @@ public void test(Client player, float distance)
         {
             player.SendChatMessage("nie udało się stworzyć pojazdu");
         }
+    }
+
+    [Command("save")]
+    public void save(Client player)
+    {
+        player.Save();
     }
 }

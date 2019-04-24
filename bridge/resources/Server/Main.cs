@@ -11,6 +11,7 @@ using Database;
 using Managers;
 using Utils;
 using Extend.Vehicles;
+using Extend.Clients;
 using Vehicle = GTANetworkAPI.Vehicle;
 using Data.Vehicle;
 using Extend;
@@ -102,9 +103,15 @@ namespace Main
             NAPI.Entity.SetEntityTransparency(player, 0);
             //NAPI.Entity.SetEntityInvincible(player, true);
             NAPI.Entity.SetEntityPosition(player, new Vector3(9999, 9999, 9999));
-           // NAPI.Entity.SetEntityPositionFrozen(player, true);
-            Globals.Managers.spawn.SpawnPlayer(player);
+            // NAPI.Entity.SetEntityPositionFrozen(player, true);
             player.FreezePosition = true;
+            Globals.Managers.spawn.SpawnPlayer(player, true);
+        }
+
+        [ServerEvent(Event.PlayerDisconnected)]
+        public void OnPlayerDisconnected(Client player, DisconnectionType type, string reason)
+        {
+            player.Save();
         }
     }
 }
