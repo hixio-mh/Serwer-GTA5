@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading;
 using GTANetworkAPI;
 using GTANetworkInternals;
-using Extend.Entity;
+using Extend;
 
-namespace Extend.Vehicles
+namespace Extend
 {
     public enum EVehicleType
     {

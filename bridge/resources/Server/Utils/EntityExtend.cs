@@ -6,9 +6,9 @@ using System.Threading;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
-using Extend.Maths;
+using Extend;
 
-namespace Extend.Entity
+namespace Extend
 {
     public static class CEntityExtension 
     {

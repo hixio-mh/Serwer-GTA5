@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using GTANetworkAPI;
 
-namespace Extend.Maths
+namespace Extend
 {
     public static class CMathExtension
     {

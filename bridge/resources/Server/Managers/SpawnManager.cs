@@ -10,10 +10,9 @@ using DevOne.Security.Cryptography.BCrypt;
 using Database;
 using Main;
 using Logic.Account;
-using Extend.Clients;
+using Extend;
 using Newtonsoft.Json;
 using Utils;
-using Extend;
 
 namespace Managers
 {

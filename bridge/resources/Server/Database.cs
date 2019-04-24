@@ -16,7 +16,6 @@ namespace Database
 {
     using MySql.Data.MySqlClient;
     using MySql;
-    using Extend.MysqlReader;
 
     public class CMysqlTable
     {

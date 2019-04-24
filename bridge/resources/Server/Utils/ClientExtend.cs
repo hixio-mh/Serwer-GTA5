@@ -7,7 +7,7 @@ using GTANetworkInternals;
 using GTANetworkMethods;
 using Logic.Account;
 
-namespace Extend.Clients
+namespace Extend
 {
     public static class CClientExtension
     {

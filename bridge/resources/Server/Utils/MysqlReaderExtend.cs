@@ -4,7 +4,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using MySql;
 
-namespace Extend.MysqlReader
+namespace Extend
 {
     public static class CMysqlReaderExtension
     {

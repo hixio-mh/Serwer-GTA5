@@ -10,7 +10,7 @@ using DevOne.Security.Cryptography.BCrypt;
 using Database;
 using Main;
 using Logic.Account;
-using Extend.Clients;
+using Extend;
 
 namespace Managers
 {

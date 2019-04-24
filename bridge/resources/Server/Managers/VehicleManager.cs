@@ -10,10 +10,8 @@ using DevOne.Security.Cryptography.BCrypt;
 using Database;
 using Main;
 using Logic.Account;
-using Extend.Vehicles;
+using Extend;
 using Vehicle = GTANetworkAPI.Vehicle;
-using Extend.Entity;
-using Extend.Maths;
 
 namespace Managers
 {

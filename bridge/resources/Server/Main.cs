@@ -10,8 +10,6 @@ using GTANetworkMethods;
 using Database;
 using Managers;
 using Utils;
-using Extend.Vehicles;
-using Extend.Clients;
 using Vehicle = GTANetworkAPI.Vehicle;
 using Data.Vehicle;
 using Extend;

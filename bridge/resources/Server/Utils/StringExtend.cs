@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Extend.Strings
+namespace Extend
 {
     public static class StringExtend
     {
