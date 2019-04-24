@@ -14,7 +14,6 @@ namespace Utils
 {
     public class CUtils
     {
-
         private readonly long startTickCount;
         public CUtils()
         {

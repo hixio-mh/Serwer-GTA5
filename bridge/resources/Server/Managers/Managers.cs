@@ -14,11 +14,13 @@ namespace Managers
         public CAccountManager account;
         public CVehicleManager vehicle;
         public CSpawnManager spawn;
+        public CRPCManager rpc;
         public CManagers()
         {
             account = new CAccountManager();
             vehicle = new CVehicleManager();
             spawn = new CSpawnManager();
+            rpc = new CRPCManager();
         }
     }
 }
