@@ -6,6 +6,7 @@ using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
 using Logic.Account;
+using Main;
 
 namespace Extend
 {
@@ -55,6 +56,15 @@ namespace Extend
         public static void SendChatMessage(this GTANetworkAPI.Client player, string message, params object[] format)
         {
             player.SendChatMessage(string.Format(message, format));
+        }
+        
+        public static void CleanUp(this GTANetworkAPI.Client player)
+        {
+            Globals.Systems.publicVehicles.ClearPlayerPublicVehicle(player);
+
+            if (player.Account() == null) return;
+
+            player.Account().CleanUp();
         }
 
     }

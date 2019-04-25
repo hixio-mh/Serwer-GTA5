@@ -8,9 +8,30 @@ using Newtonsoft.Json;
 
 public class CAdmin : Script
 {
+    public enum EUpdate
+    {
+        PUBLIC_VEHICLES,
+    }
     CAdmin()
     {
         Console.WriteLine("Admin włączony");
+    }
+
+    [Command("reconnect")]
+    public void reconnect(Client player)
+    {
+        player.Kick();
+    }
+
+    [Command("update")]
+    public void update(Client player, EUpdate co)
+    {
+        switch(co)
+        {
+            case EUpdate.PUBLIC_VEHICLES:
+                Globals.Systems.publicVehicles.Update();
+                break;
+        }
     }
 
     [Command("restart")]

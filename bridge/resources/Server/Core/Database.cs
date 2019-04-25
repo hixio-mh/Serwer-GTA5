@@ -609,4 +609,17 @@ namespace Database
         [MysqlColumn("rotation", 0)]
         public float rotation;
     }
+
+    [MysqlTable("vehicles_public")]
+    public class CVehiclePublicRow : MysqlRow
+    {
+        [MysqlColumn("vehiclehash", 0)]
+        public VehicleHash vehicleHash;
+
+        [MysqlColumn("position")]
+        public Vector3 position;
+
+        [MysqlColumn("rotation", 0)]
+        public float rotation;
+    }
 }

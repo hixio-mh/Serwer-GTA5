@@ -44,7 +44,7 @@ namespace Managers
 
                     break;
                 case EVehicleType.PUBLIC:
-
+                    Globals.Systems.publicVehicles.OnPlayerEnterPublicVehicle(player, vehicle, seatID);
                     break;
                 case EVehicleType.EXAM:
 
@@ -63,6 +63,7 @@ namespace Managers
             Vehicle vehicle = NAPI.Vehicle.CreateVehicle(vehicleHash, pos, rot, new Color(255, 255, 255).ToInt32(), new Color(255, 255, 255).ToInt32());
             vehicle.AddExtension();
             vehicle.SetVehicleType(type);
+            vehicle.SetSharedData("type", type);
             vehicles[type].Add(vehicle);
             switch(type)
             {
@@ -111,16 +112,45 @@ namespace Managers
             return GetPrivateVehicleByUID(vid) != null;
         }
 
-        public bool Destroy(Vehicle vehicle)
+        public bool Destroy(Vehicle vehicle, bool clearing = false)
         {
-            if(vehicle.IsType(EVehicleType.PRIVATE))
-            {
-                vehicle.Save();
-            }
+            if(vehicle == null) return false;
+
             EVehicleType type = vehicle.GetVehicleType();
+
             vehicles[type].Remove(vehicle);
 
-            NAPI.Entity.DeleteEntity(vehicle);
+            switch (type)
+            {
+                case EVehicleType.UNKNOWN:
+
+                    break;
+                case EVehicleType.PRIVATE:
+                    vehicle.Save();
+                    break;
+                case EVehicleType.FRACTION:
+
+                    break;
+                case EVehicleType.WORK:
+
+                    break;
+                case EVehicleType.PUBLIC:
+                    Globals.Systems.publicVehicles.RemovePublicVehicle(vehicle, clearing);
+                    break;
+                case EVehicleType.EXAM:
+
+                    break;
+                case EVehicleType.SALON:
+
+                    break;
+                case EVehicleType.EVENT:
+
+                    break;
+            }
+
+            if(vehicle != null)
+                NAPI.Entity.DeleteEntity(vehicle);
+
             return true;
         }
 
@@ -141,6 +171,7 @@ namespace Managers
             }
             return GetLastVid();
         }
+
         public Vehicle SpawnPrivateVehicle(uint vid, Vector3 position = null, Vector3 rotation = null)
         {
             if(IsPrivateVehicleAlreadySpawned(vid))

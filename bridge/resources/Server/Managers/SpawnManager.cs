@@ -48,6 +48,7 @@ namespace Managers
             }
             return nearest;
         }
+
         public CSpawnRow GetRandom()
         {
             return spawnList.GetRandom();
@@ -62,6 +63,7 @@ namespace Managers
             player.Health = 100;
             player.Rotation.Z = rotation;
         }
+
         public void SpawnPlayer(Client player, bool lastPosition = false)
         {
             CSpawnRow spawn = GetRandom();

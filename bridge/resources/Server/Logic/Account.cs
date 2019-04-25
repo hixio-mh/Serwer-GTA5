@@ -178,6 +178,11 @@ namespace Logic.Account
             this.player = player;
         }
 
+        public void CleanUp()
+        {
+
+        }
+
         public void UpdateLicensesFromDB(bool force = false)
         {
             if (force || !licensesUpdatedFromDB)

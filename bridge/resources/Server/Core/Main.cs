@@ -13,6 +13,7 @@ using Utils;
 using Vehicle = GTANetworkAPI.Vehicle;
 using Data.Vehicle;
 using Extend;
+using Systems;
 
 namespace Main
 {
@@ -23,6 +24,7 @@ namespace Main
         static public CMysql Mysql;
         static public CManagers Managers;
         static public CUtils Utils;
+        static public CSystems Systems;
     }
 
     public class CMain : Script
@@ -42,7 +44,7 @@ namespace Main
             Globals.Managers = new CManagers();
             Globals.Utils = new CUtils();
             VehicleData.InitiliazeDefault();
-
+            Globals.Systems = new CSystems();
             NAPI.Server.SetCommandErrorMessage("Komenda nie istnieje");
 
             //CSpawnRow spawn1 = Globals.Managers.spawn.GetNearest(new Vector3(20, 0, 0));
@@ -82,7 +84,6 @@ namespace Main
         {
         }
 
-
         [ServerEvent(Event.PlayerEnterVehicle)]
         public void OnPlayerEnterVehicle(Client player, Vehicle vehicle, sbyte seatID)
         {
@@ -102,13 +103,14 @@ namespace Main
             //NAPI.Entity.SetEntityInvincible(player, true);
             NAPI.Entity.SetEntityPosition(player, new Vector3(9999, 9999, 9999));
             // NAPI.Entity.SetEntityPositionFrozen(player, true);
-            player.FreezePosition = true;
+            //player.FreezePosition = true;
             Globals.Managers.spawn.SpawnPlayer(player, true);
         }
 
         [ServerEvent(Event.PlayerDisconnected)]
         public void OnPlayerDisconnected(Client player, DisconnectionType type, string reason)
         {
+            player.CleanUp();
             player.Save();
         }
     }
