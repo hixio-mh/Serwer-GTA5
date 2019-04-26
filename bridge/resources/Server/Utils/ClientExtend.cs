@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using System;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
 using Logic.Account;
 using Main;
+using Managers;
 
 namespace Extend
 {
@@ -65,6 +63,15 @@ namespace Extend
             if (player.Account() == null) return;
 
             player.Account().CleanUp();
+        }
+        static public string RPCs(CRPCManager.ERPCs eRPC)
+        {
+            return eRPC.ToString();
+        }
+
+        public static void TriggerClient(this GTANetworkAPI.Client player, CRPCManager.ERPCs rpc, params object[] args)
+        {
+            NAPI.ClientEvent.TriggerClientEvent(player, rpc.ToString(), args);
         }
 
     }

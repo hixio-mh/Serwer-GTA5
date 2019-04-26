@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using RAGE;
 using Player = RAGE.Elements.Player;
 using Manager;

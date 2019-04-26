@@ -1,39 +1,27 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using RAGE;
 using System.Reflection;
-using Extend;
+using Main;
 
-namespace Managers
+namespace Manager
 {
     public class CRPC { }
 
-    class CRPCTest : CRPC
+    class CRPCPlayerUpdateExp : CRPC
     {
-        public string test1;
-        public string test2;
-        public int test4;
+        public int xp;
+        public int level;
         public bool OnDone() { return true; } // wykonywane po wczytaniu
     }
 
+
     public class CRPCManager
     {
-        public enum ERPCs
+        enum ERPCs
         {
             PLAYER_UPDATE_EXP,
-        }
-
-        public CRPCManager()
-        {
-            /*CRPCTest t1 = new CRPCTest();
-            CRPCTest t2 = new CRPCTest();
-            CRPCTest t3 = new CRPCTest();
-            bool a = ProcessRPC(t1, 3, "ASD", 56);
-            bool b = ProcessRPC(t2, "asd", "ASD", 56);
-            bool c = ProcessRPC(t3);
-            Console.WriteLine("Test a {0} {1}",a,t1.Serialize());
-            Console.WriteLine("Test b {0} {1}",b,t2.Serialize());
-            Console.WriteLine("Test c {0} {1}",c,t3.Serialize());*/
         }
 
         public bool ProcessRPC(CRPC cSignal, params object[] parametrs)
@@ -72,9 +60,9 @@ namespace Managers
             }
 
             MethodInfo onDone = cSignal.GetType().GetMethod("OnDone");
-            if(onDone != null)
+            if (onDone != null)
             {
-                if(!(bool)onDone.Invoke(cSignal, null))
+                if (!(bool)onDone.Invoke(cSignal, null))
                 {
                     cSignal = null;
                     return false;
@@ -82,5 +70,23 @@ namespace Managers
             }
             return true;
         }
+
+        void OnPlayerUpdateEXP(CRPCPlayerUpdateExp obj)
+        {
+            Globals.localPlayer.SetData("xp", obj.xp);
+            Globals.localPlayer.SetData("level", obj.level);
+        }
+
+        public CRPCManager()
+        {
+            RAGE.Events.Add(ERPCs.PLAYER_UPDATE_EXP.ToString(), (object[] obj) => {
+                CRPCPlayerUpdateExp playerUpdateEXP = new CRPCPlayerUpdateExp();
+                if (ProcessRPC(playerUpdateEXP, obj))
+                    OnPlayerUpdateEXP(playerUpdateEXP);
+            });
+
+        }
+
+        
     }
 }

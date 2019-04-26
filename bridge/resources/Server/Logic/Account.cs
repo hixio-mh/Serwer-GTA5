@@ -156,11 +156,13 @@ namespace Logic.Account
 
     public class CAccount
     {
+
         public readonly uint pid;
         public readonly string login;
         public readonly string email;
         public long money;
         public uint xp;
+        public ushort level;
 
         public Client player;
         private bool licensesUpdatedFromDB = false;
@@ -169,6 +171,18 @@ namespace Logic.Account
         public CClothes clothes = new CClothes();
         public Vector3 lastPosition = null;
 
+        public void SetXP(uint xp)
+        {
+            this.xp = xp;
+            level = Globals.Managers.account.GetLevelFromXP(xp);
+            player.TriggerClient(CRPCManager.ERPCs.PLAYER_UPDATE_EXP, xp, level);
+        }
+
+        public void AddXP(uint xp)
+        {
+            SetXP(this.xp + xp);
+        }
+
         public void SetPlayer(Client player)
         {
             player.AssignUID(pid);
@@ -176,6 +190,8 @@ namespace Logic.Account
             clothes.RebuildPlayer(player);
 
             this.player = player;
+
+            SetXP(xp);
         }
 
         public void CleanUp()

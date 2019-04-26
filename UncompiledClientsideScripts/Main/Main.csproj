@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Reference Include="rage-sharp">
-      <HintPath>G:\RageMP\dotnet\rage-sharp.dll</HintPath>
+      <HintPath>..\..\bridge\runtime\rage-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 

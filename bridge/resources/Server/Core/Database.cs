@@ -411,6 +411,10 @@ namespace Database
             {
                 return reader.GetUInt32(id);
             }
+            else if (columnType == typeof(ushort))
+            {
+                return reader.GetUInt16(id);
+            }
             else if (columnType == typeof(long))
             {
                 return reader.GetInt64(id);
@@ -634,5 +638,15 @@ namespace Database
 
         [MysqlColumn("value", 0)]
         public object value;
+    }
+
+    [MysqlTable("levels")]
+    public class CLevelRow : MysqlRow
+    {
+        [MysqlColumn("level")]
+        public ushort level;
+
+        [MysqlColumn("xp", 0)]
+        public uint xp;
     }
 }

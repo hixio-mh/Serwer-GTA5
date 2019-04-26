@@ -17,14 +17,27 @@ namespace Managers
     public class CAccountManager
     {
         List<uint> listUsedAccounts = new List<uint>();
+        List<CLevelRow> levelsRows = new List<CLevelRow>();
+
         public CAccountManager()
         {
-            /*string haslo1 = "$2a$10$3lDxW2vW.KK2GtJAr33WxeLJc19cBmSk1mJPY/HBO8WhLE4/USMAa";
-            string haslo2 = BCryptHelper.HashPassword("siema", BCryptHelper.GenerateSalt());
-            bool poprawne1 = BCryptHelper.CheckPassword("siema", haslo1);
-            bool poprawne2 = BCryptHelper.CheckPassword("siema", haslo2);
-            bool blabla = haslo1 == haslo2;
-            Console.WriteLine("blabla {0} poprawne1 {1} poprawne2 {2}", blabla.ToString(), poprawne1.ToString(), poprawne2.ToString());*/
+            UpdateLevels();
+        }
+
+        public void UpdateLevels()
+        {
+            levelsRows.Clear();
+            Globals.Mysql.GetTableRows(ref levelsRows);
+        }
+
+        public ushort GetLevelFromXP(uint xp)
+        {
+            foreach (CLevelRow levelRow in levelsRows)
+            {
+                if (xp < levelRow.xp) return (ushort)(levelRow.level - 1);
+            }
+
+            return 1;
         }
 
         public uint GetLastPid()
@@ -111,7 +124,7 @@ namespace Managers
             CAccount account = new CAccount(pid);
             account.SetPlayer(player);
             player.SetAccount(account);
-            return new CAccount(pid);
+            return account;
         }
 
         public CAccount LogIn(Client player, CAccount account)

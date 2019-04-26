@@ -20,7 +20,7 @@ namespace Main
                 result = Convert.ToDouble(obj);
                 return true;
             }
-            catch(FormatException e)
+            catch(Exception)
             {
                 return false;
             }
