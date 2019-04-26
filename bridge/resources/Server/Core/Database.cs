@@ -485,7 +485,10 @@ namespace Database
                 }
 
             }
-
+            else if(columnType == typeof(object))
+            {
+                return reader.GetValue(id);
+            }
             return defaultValue;
         }
         public bool ReadRow<T>(MySqlDataReader reader, ref T row, bool skipRead = false)
@@ -621,5 +624,15 @@ namespace Database
 
         [MysqlColumn("rotation", 0)]
         public float rotation;
+    }
+
+    [MysqlTable("config")]
+    public class CConfigRow : MysqlRow
+    {
+        [MysqlColumn("configkey")]
+        public string key;
+
+        [MysqlColumn("value", 0)]
+        public object value;
     }
 }

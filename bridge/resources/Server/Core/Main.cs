@@ -14,6 +14,7 @@ using Vehicle = GTANetworkAPI.Vehicle;
 using Data.Vehicle;
 using Extend;
 using Systems;
+using Newtonsoft.Json.Linq;
 
 namespace Main
 {
@@ -25,6 +26,7 @@ namespace Main
         static public CManagers Managers;
         static public CUtils Utils;
         static public CSystems Systems;
+        static public CConfig Config;
     }
 
     public class CMain : Script
@@ -45,23 +47,31 @@ namespace Main
             Globals.Utils = new CUtils();
             VehicleData.InitiliazeDefault();
             Globals.Systems = new CSystems();
+            Globals.Config = new CConfig();
             NAPI.Server.SetCommandErrorMessage("Komenda nie istnieje");
 
+            Test();
+        }
+
+        public void Test()
+        {
+            JObject conf = (JObject)Globals.Config["test4"];
+            Console.WriteLine("Config {0} {1}", Globals.Config["test5"], conf["A"]);
             //CSpawnRow spawn1 = Globals.Managers.spawn.GetNearest(new Vector3(20, 0, 0));
             //CSpawnRow spawn2 = Globals.Managers.spawn.GetNearest(new Vector3(200, 0, 0));
             //Console.WriteLine("Najbliższy: {0} {1}", spawn1.Serialize(), spawn2.Serialize());
 
-        //Vehicle vehA = Globals.Managers.vehicle.Create(EVehicleType.UNKNOWN, VehicleHash.Adder, new Vector3(-414.72, 1127.23, 325.90), new Vector3(0,0,0));
-        //Vehicle vehB = Globals.Managers.vehicle.Create(EVehicleType.SALON, VehicleHash.Adder, new Vector3(-404.72, 1127.23, 325.90), new Vector3(0,0,0));
-        //Console.WriteLine("vehicle type {0} {1}", vehA.IsType(EVehicleType.SALON), vehB.IsType(EVehicleType.SALON));
+            //Vehicle vehA = Globals.Managers.vehicle.Create(EVehicleType.UNKNOWN, VehicleHash.Adder, new Vector3(-414.72, 1127.23, 325.90), new Vector3(0,0,0));
+            //Vehicle vehB = Globals.Managers.vehicle.Create(EVehicleType.SALON, VehicleHash.Adder, new Vector3(-404.72, 1127.23, 325.90), new Vector3(0,0,0));
+            //Console.WriteLine("vehicle type {0} {1}", vehA.IsType(EVehicleType.SALON), vehB.IsType(EVehicleType.SALON));
 
-        /*using (MySqlDataReader reader = Globals.Mysql.RawGet("select pid,login,pass,email,money,xp from accounts where pid = 5"))
-        {
-            Database.CAccountsRow row = new Database.CAccountsRow();
-            Globals.Mysql.select.ReadRow(reader, ref row);
-            Console.WriteLine("{0}",JsonConvert.SerializeObject(row));
-        }*/
-    }
+            /*using (MySqlDataReader reader = Globals.Mysql.RawGet("select pid,login,pass,email,money,xp from accounts where pid = 5"))
+            {
+                Database.CAccountsRow row = new Database.CAccountsRow();
+                Globals.Mysql.select.ReadRow(reader, ref row);
+                Console.WriteLine("{0}",JsonConvert.SerializeObject(row));
+            }*/
+        }
 
         [ServerEvent(Event.ResourceStart)]
         public void OnResourceStart()

@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace Extend
 {
@@ -20,6 +21,24 @@ namespace Extend
         public static bool IsBetween(this string str, ushort min, ushort max)
         {
             return str.Length >= min && str.Length <= max;
+        }
+
+
+        public static bool Deserialize<T>(this string obj, out T result)
+        {
+            try
+            {
+                JsonSerializerSettings settings = new JsonSerializerSettings();
+                settings.MissingMemberHandling = MissingMemberHandling.Error;
+
+                result = JsonConvert.DeserializeObject<T>(obj, settings);
+                return true;
+            }
+            catch (Exception)
+            {
+                result = default(T);
+                return false;
+            }
         }
     }
 }
