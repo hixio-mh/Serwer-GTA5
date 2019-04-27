@@ -50,13 +50,15 @@ namespace Main
             Globals.Config = new CConfig();
             NAPI.Server.SetCommandErrorMessage("Komenda nie istnieje");
 
+            //Console.Clear();
+            Console.WriteLine("Serwer został uruchomiony");
             Test();
         }
 
         public void Test()
         {
-            JObject conf = (JObject)Globals.Config["test4"];
-            Console.WriteLine("Config {0} {1}", Globals.Config["test5"], conf["A"]);
+            //JObject conf = (JObject)Globals.Config["test4"];
+            //Console.WriteLine("Config {0} {1}", Globals.Config["test5"], conf["A"]);
             //CSpawnRow spawn1 = Globals.Managers.spawn.GetNearest(new Vector3(20, 0, 0));
             //CSpawnRow spawn2 = Globals.Managers.spawn.GetNearest(new Vector3(200, 0, 0));
             //Console.WriteLine("Najbliższy: {0} {1}", spawn1.Serialize(), spawn2.Serialize());
