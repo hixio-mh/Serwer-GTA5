@@ -28,47 +28,6 @@
             "assemblyVersion": "2.10.0.0",
             "fileVersion": "2.10.0.0"
           }
-        },
-        "resources": {
-          "cs/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "cs"
-          },
-          "de/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "de"
-          },
-          "es/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "es"
-          },
-          "fr/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "fr"
-          },
-          "it/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "it"
-          },
-          "ja/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ja"
-          },
-          "ko/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ko"
-          },
-          "pl/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "pl"
-          },
-          "pt-BR/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "ru/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ru"
-          },
-          "tr/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "tr"
-          },
-          "zh-Hans/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "zh-Hant/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "zh-Hant"
-          }
         }
       },
       "Microsoft.CodeAnalysis.CSharp/2.10.0.0": {
@@ -76,47 +35,6 @@
           "Microsoft.CodeAnalysis.CSharp.dll": {
             "assemblyVersion": "2.10.0.0",
             "fileVersion": "2.10.0.0"
-          }
-        },
-        "resources": {
-          "cs/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "cs"
-          },
-          "de/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "de"
-          },
-          "es/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "es"
-          },
-          "fr/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "fr"
-          },
-          "it/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "it"
-          },
-          "ja/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "ja"
-          },
-          "ko/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "ko"
-          },
-          "pl/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "pl"
-          },
-          "pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "ru/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "ru"
-          },
-          "tr/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "tr"
-          },
-          "zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "zh-Hant"
           }
         }
       },

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="rage-sharp">
       <HintPath>..\..\bridge\runtime\rage-sharp.dll</HintPath>
     </Reference>

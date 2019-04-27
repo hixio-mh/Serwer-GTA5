@@ -41,3 +41,20 @@ C:\Users\anfar\Desktop\Serwer GTA5\Serwer-GTA5\UncompiledClientsideScripts\Main\
 C:\Users\anfar\Desktop\Serwer GTA5\Serwer-GTA5\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.csproj.CopyComplete
 C:\Users\anfar\Desktop\Serwer GTA5\Serwer-GTA5\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.dll
 C:\Users\anfar\Desktop\Serwer GTA5\Serwer-GTA5\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.pdb
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Main.deps.json
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Main.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Main.pdb
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\rage-sharp.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Microsoft.CodeAnalysis.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Microsoft.CodeAnalysis.CSharp.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\NeoSmart.Hashing.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\xxHash.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Newtonsoft.Json.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\rage-sharp.xml
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.csprojAssemblyReference.cache
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.csproj.CoreCompileInputs.cache
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.AssemblyInfoInputs.cache
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.AssemblyInfo.cs
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.csproj.CopyComplete
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.dll
+I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.pdb
