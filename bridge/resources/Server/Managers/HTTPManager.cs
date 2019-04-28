@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading;
+using System.Linq.Expressions;
 using Extend;
+using System.Collections.Specialized;
 
 namespace Managers
 {
@@ -11,6 +14,25 @@ namespace Managers
         private string[] listenedAddresses;
         private bool isWorked;
         private HttpListener listener;
+        private object responseObject;
+
+        private Dictionary<string, Func<HttpListenerContext, NameValueCollection, object>> dEndPoints = new Dictionary<string, Func<HttpListenerContext, NameValueCollection, object>>
+        {
+            ["/test"] = (HttpListenerContext context, NameValueCollection query) =>
+            {
+                string a = query["a"];
+                string b = query["b"];
+                return new string[] { "a = ", a, b, "test", "c" };
+            },
+            ["/test2"] = (HttpListenerContext context, NameValueCollection query) =>
+            {
+                return new string[] { "a", "test2", "c" };
+            },
+            ["/test3"] = (HttpListenerContext context, NameValueCollection query) =>
+            {
+                return context.User;
+            },
+        };
 
         public CHTTPManager()
         {
@@ -19,8 +41,18 @@ namespace Managers
             RunServer();
         }
 
-        private void HandleRequest(HttpListenerContext context)
+        private bool HandleRequest(HttpListenerContext context)
         {
+            if (context.Request.HttpMethod != "GET") return false;
+
+            Func<HttpListenerContext, NameValueCollection, object> endPoint = default;
+            string endPointName = context.Request.RawUrl.Split("?")[0];
+            if (dEndPoints.TryGetValue(endPointName, out endPoint))
+            {
+                responseObject = endPoint(context, context.Request.QueryString);
+                return true;
+            }
+            return false;
         }
 
         private void work()
@@ -36,17 +68,22 @@ namespace Managers
                 try
                 {
                     HttpListenerContext context = listener.GetContext();
-                    HttpListenerRequest request = context.Request;
-                    HttpListenerResponse response = context.Response;
 
-                    Console.WriteLine("request url {0}, method {1}", request.RawUrl, request.HttpMethod);
+                    byte[] buffer;
+                    if (HandleRequest(context))
+                    {
+                        buffer = Encoding.UTF8.GetBytes(responseObject.Serialize());
+                        context.Response.StatusCode = (int)HttpStatusCode.OK;
+                    }
+                    else
+                    {
+                        buffer = Encoding.UTF8.GetBytes("");
+                        context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                    }
 
-                    string responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
-                    byte[] buffer = Encoding.UTF8.GetBytes(responseString);
-
-                    response.ContentLength64 = buffer.Length;
-                    response.StatusCode = (int)HttpStatusCode.OK;
-                    System.IO.Stream output = response.OutputStream;
+                    context.Response.ContentType = "application/json";
+                    context.Response.ContentLength64 = buffer.Length;
+                    System.IO.Stream output = context.Response.OutputStream;
                     output.Write(buffer, 0, buffer.Length);
                     // You must close the output stream.
                     output.Close();
