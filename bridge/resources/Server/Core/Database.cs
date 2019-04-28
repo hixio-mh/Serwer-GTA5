@@ -477,8 +477,8 @@ namespace Database
             }
             else if (columnType == typeof(Vector3))
             {
-                string strVector3 = reader.GetString(id);
-                string[] splt = strVector3.Split(",");
+                string strColor4 = reader.GetString(id);
+                string[] splt = strColor4.Split(",");
                 if (splt.Length == 3)
                 {
                     return new Vector3(System.Convert.ToDouble(splt[0]), System.Convert.ToDouble(splt[1]), System.Convert.ToDouble(splt[2]));
@@ -488,6 +488,19 @@ namespace Database
                     return new Vector3(0, 0, 0);
                 }
 
+            }
+            else if (columnType == typeof(Color))
+            {
+                string strVector3 = reader.GetString(id);
+                string[] splt = strVector3.Split(",");
+                if (splt.Length == 4)
+                {
+                    return new Color(System.Convert.ToInt32(splt[0]), System.Convert.ToInt32(splt[1]), System.Convert.ToInt32(splt[2]), System.Convert.ToInt32(splt[3]));
+                }
+                else
+                {
+                    return new Color(255,255,255,255);
+                }
             }
             else if(columnType == typeof(object))
             {
@@ -648,5 +661,41 @@ namespace Database
 
         [MysqlColumn("xp", 0)]
         public uint xp;
+    }
+
+    [MysqlTable("admins")]
+    public class CAdminRow : MysqlRow
+    {
+        [MysqlColumn("pid")]
+        public uint pid;
+
+        [MysqlColumn("rank")]
+        public byte rank;
+    }
+
+    [MysqlTable("admins_ranks")]
+    public class CAdminRankRow : MysqlRow
+    {
+        [MysqlColumn("rank")]
+        public byte rank;
+        
+        [MysqlColumn("rankname")]
+        public string rankname;
+
+        [MysqlColumn("color")]
+        public int color;
+
+        [MysqlColumn("level")]
+        public byte level;
+    }
+
+    [MysqlTable("admins_commands")]
+    public class CAdminCommandRow : MysqlRow
+    {
+        [MysqlColumn("command")]
+        public string command;
+
+        [MysqlColumn("level")]
+        public byte level;
     }
 }
