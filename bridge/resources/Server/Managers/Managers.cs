@@ -16,6 +16,7 @@ namespace Managers
         public CSpawnManager spawn;
         public CRPCManager rpc;
         public CHTTPManager http;
+        public CAdminManager admin;
         public CManagers()
         {
             account = new CAccountManager();
@@ -23,6 +24,7 @@ namespace Managers
             spawn = new CSpawnManager();
             rpc = new CRPCManager();
             http = new CHTTPManager();
+            admin = new CAdminManager();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Linq.Expressions;
+using GTANetworkAPI;
 using Extend;
 using System.Collections.Specialized;
 
@@ -18,11 +19,14 @@ namespace Managers
 
         private Dictionary<string, Func<HttpListenerContext, NameValueCollection, object>> dEndPoints = new Dictionary<string, Func<HttpListenerContext, NameValueCollection, object>>
         {
-            ["/test"] = (HttpListenerContext context, NameValueCollection query) =>
+            ["/players"] = (HttpListenerContext context, NameValueCollection query) =>
             {
-                string a = query["a"];
-                string b = query["b"];
-                return new string[] { "a = ", a, b, "test", "c" };
+                List<string> players = new List<string>();
+                foreach(Client client in NAPI.Pools.GetAllPlayers())
+                {
+                    players.Add(client.Name);
+                }
+                return players.ToArray();
             },
             ["/test2"] = (HttpListenerContext context, NameValueCollection query) =>
             {
@@ -36,9 +40,11 @@ namespace Managers
 
         public CHTTPManager()
         {
+#if false
             listenedAddresses = new string[] { "http://localhost:3000/" };
             isWorked = false;
             RunServer();
+#endif
         }
 
         private bool HandleRequest(HttpListenerContext context)

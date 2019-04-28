@@ -59,6 +59,7 @@ namespace Extend
         public static void CleanUp(this GTANetworkAPI.Client player)
         {
             Globals.Systems.publicVehicles.ClearPlayerPublicVehicle(player);
+            Globals.Managers.admin.StopDuty(player);
 
             if (player.Account() == null) return;
 
@@ -72,6 +73,11 @@ namespace Extend
         public static void TriggerClient(this GTANetworkAPI.Client player, CRPCManager.ERPCs rpc, params object[] args)
         {
             NAPI.ClientEvent.TriggerClientEvent(player, rpc.ToString(), args);
+        }
+        
+        public static bool IsOnDuty(this GTANetworkAPI.Client player)
+        {
+            return Globals.Managers.admin.IsOnDuty(player);
         }
 
     }
