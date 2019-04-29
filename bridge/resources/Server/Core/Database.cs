@@ -663,6 +663,31 @@ namespace Database
         public uint xp;
     }
 
+    [MysqlTable("markers")]
+    public class CMarkerRow : MysqlRow
+    {
+        [MysqlColumn("mid")]
+        public uint mid;
+
+        [MysqlColumn("type")]
+        public uint type;
+
+        [MysqlColumn("scale")]
+        public float scale;
+
+        [MysqlColumn("color")]
+        public Color color;
+
+        [MysqlColumn("position")]
+        public Vector3 position;
+
+        [MysqlColumn("blip")]
+        public int blip;
+
+        [MysqlColumn("action")]
+        public int action;
+    }
+
     [MysqlTable("admins")]
     public class CAdminRow : MysqlRow
     {
