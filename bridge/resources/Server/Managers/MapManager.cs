@@ -10,11 +10,11 @@ namespace Managers
 {
     class CMapManager
     {
+        string[] maps = new string[] { "prawko", "urzad" };
+        string path = "bridge/resources/maps/";
+
         public CMapManager()
         {
-            string[] maps = new string[] { "prawko", "urzad" };
-            string path = "bridge/resources/maps/";
-
             for(int j = 0; j < maps.Length; j++)
             {
                 string json = File.ReadAllText($"{path}{maps[j]}");
