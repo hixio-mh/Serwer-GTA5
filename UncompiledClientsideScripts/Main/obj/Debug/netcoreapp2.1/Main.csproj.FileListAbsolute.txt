@@ -49,7 +49,6 @@ I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netc
 I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Microsoft.CodeAnalysis.CSharp.dll
 I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\NeoSmart.Hashing.dll
 I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\xxHash.dll
-I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\Newtonsoft.Json.dll
 I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\bin\Debug\netcoreapp2.1\rage-sharp.xml
 I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.csprojAssemblyReference.cache
 I:\RAGE_Multiplayer\server-files\UncompiledClientsideScripts\Main\obj\Debug\netcoreapp2.1\Main.csproj.CoreCompileInputs.cache

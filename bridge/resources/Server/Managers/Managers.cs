@@ -25,7 +25,7 @@ namespace Managers
             spawn = new CSpawnManager();
             rpc = new CRPCManager();
             http = new CHTTPManager();
-            map = new CMapManager();
+            //map = new CMapManager();
             admin = new CAdminManager();
         }
     }

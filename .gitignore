@@ -44,3 +44,7 @@ bridge/resources/obj/Debug/
 bridge/resources/Server/obj/Debug/netcoreapp2\.2/
 
 bridge/resources/Server/obj/
+
+UncompiledClientsideScripts/Main/bin/Debug/netcoreapp2\.1/
+
+UncompiledClientsideScripts/Main/obj/Debug/netcoreapp2\.1/

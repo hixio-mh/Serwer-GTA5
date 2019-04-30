@@ -723,4 +723,26 @@ namespace Database
         [MysqlColumn("level")]
         public byte level;
     }
+
+    [MysqlTable("exams_questions")]
+    public class CExamQuestion : MysqlRow
+    {
+        [MysqlColumn("question")]
+        public string question;
+
+        [MysqlColumn("a")]
+        public string a;
+
+        [MysqlColumn("b")]
+        public string b;
+
+        [MysqlColumn("c")]
+        public string c;
+
+        [MysqlColumn("d")]
+        public string d;
+
+        [MysqlColumn("exam")]
+        public byte exam;
+    }
 }

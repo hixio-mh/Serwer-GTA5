@@ -7,7 +7,7 @@ namespace RAGE
 {
     public static class ChatExtend
     {
-        public static void Chat(string message, params object[] format)
+        public static void Output(string message, params object[] format)
         {
             RAGE.Chat.Output(string.Format(message, format));
         }

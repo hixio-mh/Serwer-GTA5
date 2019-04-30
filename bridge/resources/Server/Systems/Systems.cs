@@ -8,10 +8,12 @@ namespace Systems
     {
         public CPublicVehicles publicVehicles;
         public CAdmin admin;
+        public CExams exams;
         public CSystems()
         {
             publicVehicles = new CPublicVehicles();
             admin = new CAdmin();
+            exams = new CExams();
         }
     }
 }

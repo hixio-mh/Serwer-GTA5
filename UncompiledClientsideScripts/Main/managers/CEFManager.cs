@@ -91,17 +91,17 @@ namespace Manager
 
         void OnCEFEventTest(CTest obj)
         {
-            ChatExtend.Chat("XD 1 1={0} 2={1} 3={2}", obj.bla1, obj.bla2, obj.bla3);
+            ChatExtend.Output("XD 1 1={0} 2={1} 3={2}", obj.bla1, obj.bla2, obj.bla3);
         }
 
         void OnCEFEventOnError(COnError obj)
         {
-            ChatExtend.Chat("{0} {1} {2}:{3} {4}", obj.message, obj.source, obj.line, obj.colno, obj.error);
+            ChatExtend.Output("{0} {1} {2}:{3} {4}", obj.message, obj.source, obj.line, obj.colno, obj.error);
         }
         
         void OnCEFEventPrint(CPrint obj)
         {
-            ChatExtend.Chat("print {0}", obj.text);
+            ChatExtend.Output("print {0}", obj.text);
         }
 
         void OnCEFEvent(object[] obj)
