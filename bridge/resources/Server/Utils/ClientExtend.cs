@@ -65,6 +65,7 @@ namespace Extend
 
             player.Account().CleanUp();
         }
+
         static public string RPCs(CRPCManager.ERPCs eRPC)
         {
             return eRPC.ToString();
@@ -78,6 +79,34 @@ namespace Extend
         public static bool IsOnDuty(this GTANetworkAPI.Client player)
         {
             return Globals.Managers.admin.IsOnDuty(player);
+        }
+        
+        public static bool GiveItem(this GTANetworkAPI.Client player, CItem item, byte? x = null, byte? y = null)
+        {
+            if (player.Account() == null) return false;
+
+            return player.Account().inventory.GiveItem(item, x, y);
+        }
+
+        public static CItem GiveItem(this GTANetworkAPI.Client player, uint item, byte? x = null, byte? y = null)
+        {
+            if (player.Account() == null) return null;
+
+            return player.Account().inventory.GiveItem(item, x, y);
+        }
+
+        public static int GetFreeSlots(this GTANetworkAPI.Client player)
+        {
+            if (player.Account() == null) return 0;
+
+            return player.Account().inventory.FreeSlots;
+        }
+        
+        public static CItem GetItemBySlot(this GTANetworkAPI.Client player, byte x, byte y)
+        {
+            if (player.Account() == null) return null;
+
+            return player.Account().inventory.GetItemBySlot(x,y);
         }
 
     }

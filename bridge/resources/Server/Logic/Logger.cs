@@ -13,5 +13,13 @@ namespace Logger
             Globals.Mysql.Update("insert into accounts_logs_money (pid,previous,current,description)values(@p1,@p2,@p3,@p4)",
                 pid, previous, current, description);
         }
+
+        public static void TellSomethingImportant(string message)
+        {
+            ConsoleColor last = Console.BackgroundColor;
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.WriteLine("WAŻNE: {0}",message);
+            Console.BackgroundColor = last;
+        }
     }
 }

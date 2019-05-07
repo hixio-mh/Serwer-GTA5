@@ -435,6 +435,14 @@ namespace Database
             {
                 return (VehicleHash)reader.GetUInt32(id);
             }
+            else if (columnType == typeof(bool))
+            {
+                string str = reader.GetString(id);
+                if(str == "true")
+                    return true;
+
+                return false;
+            }
             else if (columnType == typeof(CAccessories))
             {
                 CAccessories pAccessories = new CAccessories();
@@ -744,5 +752,27 @@ namespace Database
 
         [MysqlColumn("exam")]
         public byte exam;
+    }
+
+    [MysqlTable("items_base")]
+    public class CItemBaseRow : MysqlRow
+    {
+        [MysqlColumn("id")]
+        public uint id;
+
+        [MysqlColumn("name")]
+        public string name;
+
+        [MysqlColumn("type")]
+        public ushort type;
+
+        [MysqlColumn("icon")]
+        public string icon;
+
+        [MysqlColumn("stack")]
+        public ushort stack;
+
+        [MysqlColumn("data")]
+        public string data;
     }
 }

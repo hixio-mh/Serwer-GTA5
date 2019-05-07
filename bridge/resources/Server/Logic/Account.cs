@@ -12,6 +12,7 @@ using Managers;
 using Database;
 using Logger;
 using Data.Account;
+using Logic.Inventory;
 using Extend;
 using Vehicle = GTANetworkAPI.Vehicle;
 
@@ -170,6 +171,7 @@ namespace Logic.Account
         public CAccessories accessories = new CAccessories();
         public CClothes clothes = new CClothes();
         public Vector3 lastPosition = null;
+        public CInventory inventory;
 
         public void SetXP(uint xp)
         {
@@ -288,6 +290,8 @@ namespace Logic.Account
             {
                 lastPosition = result.lastPosition;
             }
+
+            inventory = new CInventory(3, 3);
             Globals.Managers.account.setAccountUsed(pid, true);
         }
 

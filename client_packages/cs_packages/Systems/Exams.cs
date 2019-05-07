@@ -126,10 +126,11 @@ namespace Systems
 
             List<CQuestion> questionsList = new List<CQuestion>(count);
             byte correct;
+            List<string> abcd = new List<string>(4);
             for (int i = 0; i < count; i++)
             {
                 JToken token = questions[i];
-                List<string> abcd = new List<string>(4);
+                abcd.Clear();
                 abcd.Add((string)token["a"]);
                 abcd.Add((string)token["b"]);
                 abcd.Add((string)token["c"]);
@@ -140,8 +141,8 @@ namespace Systems
                 questionsList.Add(new CQuestion((string)token["question"], correct, abcd));
             }
             //Questions.Clear();
-            ChatExtend.Output("questionsList {0}", questionsList.Serialize());
-            questions.ToObject<CQuestion>();
+            //ChatExtend.Output("questionsList {0}", questionsList.Serialize());
+            //questions.ToObject<CQuestion>();
         }
     }
 }

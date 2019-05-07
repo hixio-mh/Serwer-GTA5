@@ -12,6 +12,7 @@ using Managers;
 using Utils;
 using Vehicle = GTANetworkAPI.Vehicle;
 using Data.Vehicle;
+using Logic.Inventory;
 using Extend;
 using Systems;
 using Newtonsoft.Json.Linq;
@@ -57,6 +58,30 @@ namespace Main
 
         public void Test()
         {
+            CInventory inv1 = new CInventory(3,2);
+
+            CInventory inv2 = new CInventory(2,2);
+            CItem a = inv1.GiveItem(1);
+            inv1.MoveItem(a, inv2, 0, 1);
+            CItem b = inv1.GiveItem(1);
+            CItem c = inv1.GiveItem(1);
+            ((CItemTest)c).A = 69;
+
+            CItemIdCard idCard = (CItemIdCard)inv1.GiveItem(3);
+            idCard.owner = "asper";
+
+            CItemIdCard innaKarta = (CItemIdCard)inv1.GiveItem(3);
+            innaKarta.cardId = 123456;
+            inv1.SyncItem(innaKarta, null);
+            //Console.WriteLine(inv1.ToJSON());
+            inv1.TakeItem(b);
+            /*int a = 5;
+            int b = 10;
+            int c = 50;
+            int d = 20;
+            CUtils.TransferNumber(ref a, ref b, c, d);
+            Console.WriteLine("ab {0} {1}",a, b);*/
+
             //JObject conf = (JObject)Globals.Config["test4"];
             //Console.WriteLine("Config {0} {1}", Globals.Config["test5"], conf["A"]);
             //CSpawnRow spawn1 = Globals.Managers.spawn.GetNearest(new Vector3(20, 0, 0));

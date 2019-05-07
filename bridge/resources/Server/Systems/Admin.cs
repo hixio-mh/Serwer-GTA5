@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Main;
 using Database;
+using Managers;
 using Extend;
 using GTANetworkAPI;
 using Logic.Account;
@@ -240,6 +241,31 @@ namespace Systems
         void save(Client player)
         {
             player.Save();
+        }
+
+        [Command("itstart")]
+        void itstart(Client player)
+        {
+            Globals.Managers.account.LogIn(player, 5);
+            player.SendChatMessage("test zalogowano {0}",player.Account());
+        }
+
+        [Command("itemtest")]
+        void itemtest(Client player)
+        {
+            player.Save();
+        }
+
+        [Command("itemgive")]
+        void itemgive(Client player)
+        {
+            if (!player.IsLoggedIn())
+                return;
+
+            CItem it1 = player.GiveItem(1);
+            CItem it2 = player.GiveItem(1);
+            CItem it3 = player.GiveItem(1);
+            CDebug.Debug("itemy", it1.position, it2.position, it3.position);
         }
     }
 }

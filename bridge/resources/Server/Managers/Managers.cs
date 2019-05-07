@@ -18,6 +18,7 @@ namespace Managers
         public CHTTPManager http;
         public CMapManager map;
         public CAdminManager admin;
+        public CItemManager item;
         public CManagers()
         {
             account = new CAccountManager();
@@ -27,6 +28,7 @@ namespace Managers
             http = new CHTTPManager();
             //map = new CMapManager();
             admin = new CAdminManager();
+            item = new CItemManager();
         }
     }
 }

@@ -142,7 +142,7 @@ namespace Systems
             }
             //Questions.Clear();
             //ChatExtend.Output("questionsList {0}", questionsList.Serialize());
-            questions.ToObject<CQuestion>();
+            //questions.ToObject<CQuestion>();
         }
     }
 }
