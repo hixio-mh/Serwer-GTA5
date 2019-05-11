@@ -50,7 +50,7 @@ namespace Logic.Inventory
         public CInventory(ushort sizeX, ushort sizeY)
         {
             id = FindFreeID();
-            CDebug.Debug("nadaj id", id);
+            //CDebug.Debug("nadaj id", id);
             inventoryPool.Add(this);
             items = new List<CItem>();
             capacity = new SInventoryCapacity(0, 0);
@@ -131,7 +131,7 @@ namespace Logic.Inventory
         {
             if (!IsInThisInventory(item)) return false;
 
-            CDebug.Debug("item tojson false: ",item.ToJson(false));
+            //CDebug.Debug("item tojson false: ",item.ToJson(false));
             return true;
         }
 

@@ -43,9 +43,9 @@ namespace Main
             System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
 
             Globals.Main = this;
+            Globals.Utils = new CUtils();
             Globals.Mysql = CMysql.initialize();
             Globals.Managers = new CManagers();
-            Globals.Utils = new CUtils();
             VehicleData.InitiliazeDefault();
             Globals.Systems = new CSystems();
             Globals.Config = new CConfig();

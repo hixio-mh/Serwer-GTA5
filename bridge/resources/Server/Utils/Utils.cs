@@ -23,9 +23,12 @@ namespace Utils
             startTickCount = DateTime.Now.Ticks;
         }
 
-        public long GetTickCount()
+        public long GetTickCount(bool precious = false)
         {
-            return (DateTime.Now.Ticks - startTickCount)/10000;
+            if(precious)
+                return (DateTime.Now.Ticks - startTickCount);
+            else
+                return (DateTime.Now.Ticks - startTickCount) / 10000;
         }
 
         public static Client GetRandomClient()

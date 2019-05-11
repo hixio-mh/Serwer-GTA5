@@ -10,10 +10,13 @@ namespace Managers
 {
     public class CAdminManager
     {
-        List<CAdminRow> Admins = new List<CAdminRow>();
+        List<CAdminRow> admins = new List<CAdminRow>();
+        public List<CAdminRow> Admins { get => admins; private set => admins = value; }
+
         List<CAdminRankRow> AdminsRanks = new List<CAdminRankRow>();
         List<CAdminCommandRow> AdminsCommands = new List<CAdminCommandRow>();
         List<Client> OnlineAdmins = new List<Client>();
+
 
         public CAdminManager()
         {
@@ -32,7 +35,7 @@ namespace Managers
             Admins.Clear();
             AdminsRanks.Clear();
             AdminsCommands.Clear();
-            Globals.Mysql.GetTableRows(ref Admins);
+            Globals.Mysql.GetTableRows(ref admins);
             Globals.Mysql.GetTableRows(ref AdminsRanks);
             Globals.Mysql.GetTableRows(ref AdminsCommands);
 

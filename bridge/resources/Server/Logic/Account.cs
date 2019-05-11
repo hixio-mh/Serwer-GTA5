@@ -173,7 +173,7 @@ namespace Logic.Account
         public Vector3 lastPosition = null;
         public CInventory inventory;
 
-        public void SetXP(uint xp)
+        public void SetXP(uint xp) 
         {
             this.xp = xp;
             level = Globals.Managers.account.GetLevelFromXP(xp);

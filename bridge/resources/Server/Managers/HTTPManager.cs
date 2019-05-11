@@ -6,6 +6,7 @@ using System.Threading;
 using System.Linq.Expressions;
 using GTANetworkAPI;
 using Extend;
+using Main;
 using System.Collections.Specialized;
 
 namespace Managers
@@ -16,6 +17,7 @@ namespace Managers
         private bool isWorked;
         private HttpListener listener;
         private object responseObject;
+        public bool custom = false;
 
         private Dictionary<string, Func<HttpListenerContext, NameValueCollection, object>> dEndPoints = new Dictionary<string, Func<HttpListenerContext, NameValueCollection, object>>
         {
@@ -36,28 +38,36 @@ namespace Managers
             {
                 return context.User;
             },
+            ["/admin"] = (HttpListenerContext context, NameValueCollection query) =>
+            {
+                Globals.Managers.http.custom = true;
+                context.Response.ContentType = "text/html";
+                return Globals.Systems.webPanel.OnEnter(context, query);
+            },
         };
 
         public CHTTPManager()
         {
-#if false
+#if true
             listenedAddresses = new string[] { "http://localhost:3000/" };
             isWorked = false;
             RunServer();
 #endif
         }
 
-        private bool HandleRequest(HttpListenerContext context)
+        private bool HandleRequest(HttpListenerContext context, bool custom = false)
         {
-            if (context.Request.HttpMethod != "GET") return false;
-
-            Func<HttpListenerContext, NameValueCollection, object> endPoint = default;
-            string endPointName = context.Request.RawUrl.Split("?")[0];
-            if (dEndPoints.TryGetValue(endPointName, out endPoint))
+            if (context.Request.HttpMethod == "GET")
             {
-                responseObject = endPoint(context, context.Request.QueryString);
-                return true;
+                Func<HttpListenerContext, NameValueCollection, object> endPoint = default;
+                string endPointName = context.Request.RawUrl.Split("?")[0];
+                if (dEndPoints.TryGetValue(endPointName, out endPoint))
+                {
+                    responseObject = endPoint(context, context.Request.QueryString);
+                    return true;
+                }
             }
+
             return false;
         }
 
@@ -78,7 +88,11 @@ namespace Managers
                     byte[] buffer;
                     if (HandleRequest(context))
                     {
-                        buffer = Encoding.UTF8.GetBytes(responseObject.Serialize());
+                        if(custom)
+                            buffer = Encoding.UTF8.GetBytes(responseObject.ToString());
+                        else
+                            buffer = Encoding.UTF8.GetBytes(responseObject.Serialize());
+
                         context.Response.StatusCode = (int)HttpStatusCode.OK;
                     }
                     else
@@ -87,7 +101,9 @@ namespace Managers
                         context.Response.StatusCode = (int)HttpStatusCode.NotFound;
                     }
 
-                    context.Response.ContentType = "application/json";
+                    if(!custom)
+                        context.Response.ContentType = "application/json";
+
                     context.Response.ContentLength64 = buffer.Length;
                     System.IO.Stream output = context.Response.OutputStream;
                     output.Write(buffer, 0, buffer.Length);

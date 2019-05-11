@@ -19,6 +19,7 @@ namespace Managers
         public CMapManager map;
         public CAdminManager admin;
         public CItemManager item;
+        public CPerformanceManager performance;
         public CManagers()
         {
             account = new CAccountManager();
@@ -29,6 +30,7 @@ namespace Managers
             //map = new CMapManager();
             admin = new CAdminManager();
             item = new CItemManager();
+            performance = new CPerformanceManager();
         }
     }
 }
