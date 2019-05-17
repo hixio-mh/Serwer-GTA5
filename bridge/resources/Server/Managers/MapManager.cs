@@ -8,7 +8,7 @@ using GTANetworkAPI;
 
 namespace Managers
 {
-    public class CMapManager
+    public class CMapManager : Manager
     {
         string[] maps = new string[] { "prawko", "urzad" };
         string path = "bridge/resources/maps/";

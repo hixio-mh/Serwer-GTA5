@@ -217,7 +217,7 @@ namespace Managers
         }
     }
 
-    public class CItemManager
+    public class CItemManager : Manager
     {
         List<CItem> defaultItems = new List<CItem>();
 

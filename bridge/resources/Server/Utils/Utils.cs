@@ -16,16 +16,14 @@ namespace Utils
 {
     public class CUtils
     {
-        private readonly long startTickCount;
-        public static Random Random;
+        private static readonly long startTickCount = DateTime.Now.Ticks;
+        public static Random Random = new Random();
 
         public CUtils()
         {
-            Random = new Random();
-            startTickCount = DateTime.Now.Ticks;
         }
 
-        public long GetTickCount(bool precious = false)
+        public static long GetTickCount(bool precious = false)
         {
             if(precious)
                 return (DateTime.Now.Ticks - startTickCount);

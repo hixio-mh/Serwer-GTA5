@@ -9,10 +9,11 @@ using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
-
+using Utils;
+using StopWatch = System.Diagnostics.Stopwatch;
 namespace Managers
 {
-    public class CPerformanceManager
+    public class CPerformanceManager : Manager
     {
         private readonly float MinCPUDifference = 0.01f;
         private readonly float MinRAMDifference = 1.0f;
@@ -38,24 +39,24 @@ namespace Managers
             public double MinTime { get; private set; } = 9999999999.0;
             public double MaxTime { get; private set; } = 0.0f;
 
-            double Timing;
+            StopWatch Timing;
             bool Started = false;
+            double elapsed;
 
             public bool Start()
             {
                 if (Started) return false;
-                Timing = Globals.Utils.GetTickCount(true);
+                Timing = StopWatch.StartNew();
                 return true;
             }
             public bool Stop()
             {
                 if (Started) return false;
-                double stop = Globals.Utils.GetTickCount(true);
-                double elapsed = stop - Timing;
+                Timing.Stop();
+                elapsed = Timing.ElapsedTicks;
                 MaxTime = Math.Max(MaxTime, elapsed);
                 MinTime = Math.Min(MinTime, elapsed);
                 
-                Timing = 0;
                 Count++;
                 Time += elapsed;
 
@@ -65,13 +66,15 @@ namespace Managers
 
         public class CCPU
         {
-            public DateTime Time { get; set; }
+            public long Ticks { get; set; }
+            public double Milliseconds { get => Ticks/1000; }
             public double Usage { get; set; }
         }
         
         public class CRAM
         {
-            public DateTime Time { get; set; }
+            public long Ticks { get; set; }
+            public double Milliseconds { get => Ticks / 1000; }
             public double Usage { get; set; }
         }
 
@@ -100,10 +103,10 @@ namespace Managers
             double difference2 = Math.Abs(GetLastRAMUsage().Usage - lastUsage.Item2);
 
             if (Math.Abs(GetLastCPUUsage().Usage - lastUsage.Item1) > MinCPUDifference)
-                sCPU.Push(new CCPU { Time = DateTime.Now, Usage = lastUsage.Item1 });
+                sCPU.Push(new CCPU { Ticks = DateTime.Now.Ticks, Usage = lastUsage.Item1 });
             
             if(Math.Abs(GetLastRAMUsage().Usage - lastUsage.Item2) > MinRAMDifference)
-                sRAM.Push(new CRAM { Time = DateTime.Now, Usage = lastUsage.Item2 });
+                sRAM.Push(new CRAM { Ticks = DateTime.Now.Ticks, Usage = lastUsage.Item2 });
 
             NAPI.Task.Run(CheckCPURAMUsage, 1000);
         }
@@ -150,10 +153,10 @@ namespace Managers
 
             sCPU = new Stack<CCPU>();
             sRAM = new Stack<CRAM>();
-            sCPU.Push(new CCPU { Time = DateTime.Now, Usage = 0 });
-            sRAM.Push(new CRAM { Time = DateTime.Now, Usage = 0 });
+            sCPU.Push(new CCPU { Ticks = DateTime.Now.Ticks, Usage = 0 });
+            sRAM.Push(new CRAM { Ticks = DateTime.Now.Ticks, Usage = 0 });
             CheckCPURAMUsage();
-            /*
+
             StartTiming(ETiming.Test1);
             for(int i=1;i<10000;i++)
             { }
@@ -164,7 +167,13 @@ namespace Managers
             for(int i=1;i<100;i++)
             { }
             StopTiming(ETiming.Test1);
-            CDebug.Debug("timing2 Test1:", GetTimingStats(ETiming.Test1).Serialize());*/
+            CDebug.Debug("timing2 Test1:", GetTimingStats(ETiming.Test1).Serialize());
+
+            StartTiming(ETiming.Test1);
+            for(int i=1;i<10000000;i++)
+            { }
+            StopTiming(ETiming.Test1);
+            CDebug.Debug("timing3 Test1:", GetTimingStats(ETiming.Test1).Serialize());
         }
     }
 }

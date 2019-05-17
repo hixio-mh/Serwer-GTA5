@@ -25,7 +25,7 @@ namespace Managers
         public bool OnDone() { return true; } // wykonywane po wczytaniu
     }
 
-    public class CRPCManager : Script
+    public class CRPCManager
     {
         public enum ERPCs
         {
@@ -50,7 +50,6 @@ namespace Managers
 
         }
 
-        [RemoteEvent("onClientEvent")]
         public void onClientEvent(Client player, params object[] arguments)
         {
             if (arguments.Length == 0) return;

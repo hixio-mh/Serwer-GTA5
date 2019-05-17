@@ -8,7 +8,7 @@ using Extend;
 
 namespace Managers
 {
-    public class CAdminManager
+    public class CAdminManager : Manager
     {
         List<Client> OnlineAdmins = new List<Client>();
 

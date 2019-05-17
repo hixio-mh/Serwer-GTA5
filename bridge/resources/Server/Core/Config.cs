@@ -47,12 +47,14 @@ namespace Main
 
     public class Config 
     {
-
         Configuration config = null;
         IMongoCollection<Configuration> Configuration;
+
         public void Initialize()
         {
-            List<Configuration> configs = Globals.Mongo.Configurations.Find(a => true).ToListAsync().Result;
+            Configuration = Globals.Mongo.Configurations;
+
+            List<Configuration> configs = Configuration.Find(a => true).ToListAsync().Result;
             if(configs.Count == 1)
             {
                 config = configs.First();
@@ -73,8 +75,8 @@ namespace Main
 
             config.Spawnpoints["Testowy spawn"] = new Spawn(new Vector3(0,0,0), 0.0f, "");
 
-            config.PublicVehicles.Add(new PublicVehicle(new Vector3(166.16, -352.73, 53.46), 0.0f, (VehicleHash)3078201489));
-            config.PublicVehicles.Add(new PublicVehicle(new Vector3(154.16, -352.73, 43.46), 0.0f, (VehicleHash)3078201489));
+            config.PublicVehicles.Add(new PublicVehicle(new Vector3(166.16, -352.73, 53.46), 0.0f, VehicleHash.Adder));
+            config.PublicVehicles.Add(new PublicVehicle(new Vector3(154.16, -352.73, 43.46), 0.0f, VehicleHash.Adder));
             config.ExamsQuestions.Add(new ExamQuestion(1, "Pytanie1", "a","b","c","d"));
             config.ExamsQuestions.Add(new ExamQuestion(1, "Pytanie2", "a","b","c","d"));
             config.ExamsQuestions.Add(new ExamQuestion(1, "Pytanie3", "a","b","c","d"));

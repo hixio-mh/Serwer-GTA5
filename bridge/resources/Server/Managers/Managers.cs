@@ -6,9 +6,16 @@ using System.Threading;
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
+using Utils;
+using Main;
 
 namespace Managers
 {
+    public class Manager
+    {
+
+    }
+
     public class CManagers
     {
         public CAccountManager account;
@@ -22,6 +29,8 @@ namespace Managers
         public CPerformanceManager performance;
         public CManagers()
         {
+            Console.WriteLine("amangers {0}", CUtils.GetTickCount());
+            performance = new CPerformanceManager();
             account = new CAccountManager();
             vehicle = new CVehicleManager();
             spawn = new CSpawnManager();
@@ -30,7 +39,6 @@ namespace Managers
             //map = new CMapManager();
             admin = new CAdminManager();
             item = new CItemManager();
-            performance = new CPerformanceManager();
         }
     }
 }

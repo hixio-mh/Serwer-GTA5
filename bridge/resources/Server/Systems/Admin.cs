@@ -10,7 +10,7 @@ using Vehicle = GTANetworkAPI.Vehicle;
 
 namespace Systems
 {
-    public class CAdmin : Script
+    public class CAdmin
     {
         public enum EUpdate
         {

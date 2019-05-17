@@ -166,5 +166,12 @@ namespace Main
             player.CleanUp();
             player.Save();
         }
+
+
+        [RemoteEvent("onClientEvent")]
+        public void onClientEvent(Client player, params object[] arguments)
+        {
+            Globals.Managers.rpc.onClientEvent(player, arguments);
+        }
     }
 }

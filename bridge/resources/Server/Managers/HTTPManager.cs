@@ -11,7 +11,7 @@ using System.Collections.Specialized;
 
 namespace Managers
 {
-    public class CHTTPManager
+    public class CHTTPManager : Manager
     {
         private string[] listenedAddresses;
         private bool isWorked;

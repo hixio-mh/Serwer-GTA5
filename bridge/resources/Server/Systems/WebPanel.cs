@@ -66,13 +66,13 @@ namespace Systems
             CPerformanceManager performance = Globals.Managers.performance;
             performance.sCPU.ToList().ForEach((CPerformanceManager.CCPU cpuUsage) =>
             {
-                result.Append(string.Format("{0}: {1}<br>", cpuUsage.Time, cpuUsage.Usage));
+                result.Append(string.Format("{0}: {1}<br>", cpuUsage.Ticks, cpuUsage.Usage));
             });
 
             result.Append("<hr>Użycie ramu:<br>");
             performance.sRAM.ToList().ForEach((CPerformanceManager.CRAM ramUsage) =>
             {
-                result.Append(string.Format("{0}: {1} MB<br>", ramUsage.Time, ramUsage.Usage));
+                result.Append(string.Format("{0}: {1} MB<br>", ramUsage.Ticks, ramUsage.Usage));
             });
             return result.ToString();
         }

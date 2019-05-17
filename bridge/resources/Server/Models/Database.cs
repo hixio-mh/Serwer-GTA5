@@ -37,11 +37,10 @@ namespace Model.Database
                 else
                     collectionName = (string)propertyInfo.GetValue(null);
 
-                Console.WriteLine("This type {0} {1}", typeof(U), collectionName);
-                //collectionName = 
                 return collectionName;
             }
         }
+
         [BsonIgnore]
         private static IMongoCollection<U> collection = null;
 

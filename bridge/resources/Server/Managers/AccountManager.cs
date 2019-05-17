@@ -13,7 +13,7 @@ using Extend;
 
 namespace Managers
 {
-    public class CAccountManager
+    public class CAccountManager : Manager
     {
         List<long> listUsedAccounts = new List<long>();
 
