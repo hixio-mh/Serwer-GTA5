@@ -1,229 +1,235 @@
-using System;
-using System.Runtime;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using GTANetworkAPI;
-using GTANetworkInternals;
-using GTANetworkMethods;
+using MongoDB.Driver;
+using Extend;
+using MongoDB.Bson.Serialization.Attributes;
 using Main;
 using Managers;
-using Database;
-using Logger;
-using Data.Account;
-using Logic.Inventory;
-using Extend;
+using GTANetworkAPI;
+using Mongo;
 using Vehicle = GTANetworkAPI.Vehicle;
+using Model.Database;
+using Interfaces;
+using Logic.Inventory;
 
-namespace Logic.Account
+namespace Models
 {
-    public class CLicense
+    public class License : ILicense
     {
-        public byte id;
-        public DateTime suspended;
-        public string reason;
+        public int LicenseId { get; set; }
+
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        public DateTime Suspended { get; set; }
+
+        public string SuspendedReason { get; set; }
+
         public bool isSuspended()
         {
-            if (suspended != null && suspended > DateTime.Now)
+            if (Suspended != null && Suspended > DateTime.Now)
             {
                 return true;
             }
             return false;
         }
     }
-    public class CAccessory
-    {
-        public int slot;
-        public int drawable;
-        public int texture;
-    }
-    public class CAccessories
-    {
-        public List<CAccessory> accessories;
 
-        public CAccessories()
+    public class Configuration : MongoResult<Configuration>
+    {
+        public static string CollectionName = "Configuration";
+
+        public Dictionary<string, object> Data { get; set; } = new Dictionary<string, object>();
+        public Dictionary<string, Tuple<Vector3, float, string>> Spawnpoints { get; set; } = new Dictionary<string, Tuple<Vector3, float, string>>();
+        public List<Tuple<Vector3, float, VehicleHash>> PublicVehicles { get; set; } = new List<Tuple<Vector3, float, VehicleHash>>();
+        public List<ExamQuestion> ExamsQuestions { get; set; } = new List<ExamQuestion>();
+        public List<Tuple<int, long>> Levels { get; set; } = new List<Tuple<int, long>>();
+
+    }
+
+    public class Clothes : IPlayerLook
+    {
+        public int Slot { get; set; }
+        public int Drawable { get; set; }
+        public int Texture { get; set; }
+    }
+
+    public class Accessory : IPlayerLook
+    {
+        public int Slot { get; set; }
+        public int Drawable { get; set; }
+        public int Texture { get; set; }
+    }
+
+    public class AdminACL
+    {
+        public HashSet<string> Permissions { get; set; }
+    }
+
+    public class AdminGroup
+    {
+        public string GroupName { get; set; }
+        HashSet<string> Permissions { get; set; }
+        public bool HasPermission(string permission) => Permissions.Contains(permission);
+    }
+
+    public class Admin
+    {
+        public bool IsAdmin { get; set; } = false;
+        public List<AdminGroup> Groups { get; set; }
+        public int Color { get; set; }
+        public string VisualRank { get; set; }
+
+        public bool HasPermissionTo(string permission)
         {
-            accessories = new List<CAccessory>();
+            foreach(var group in Groups)
+                if (group.HasPermission(permission))
+                    return true;
+
+            return false;
+        }
+    }
+
+    public class Account : MongoResult<Account>, IAccount
+    {
+        public static string CollectionName = "Accounts";
+
+        #region Zmienne z dokumentu
+
+        public long AccountId { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public int Health { get; set; }
+        public uint Xp { get; set; }
+
+        public long Money { get; set; }
+        public Vector3 LastPosition { get; set; }
+        public uint IP { get; set; }
+
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        public DateTime RegisterTime { get; set; } = DateTime.Now;
+
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        public DateTime LastLogin { get; set; } = DateTime.Now;
+        public List<License> Licenses { get; set; } = new List<License>();
+        public List<Clothes> Clothes { get; set; } = new List<Clothes>();
+        public List<Accessory> Accessories { get; set; } = new List<Accessory>();
+        public List<string> Groups { get; set; } = new List<string>();
+        public Inventory Inventory { get; set; } = new Inventory(3,3);
+
+        [BsonIgnoreIfNull]
+        public Admin Admin { get; set; } = null;
+
+        #endregion
+
+        #region Zmienne tymczasowe
+        [BsonIgnore]
+        private Client player;
+
+        [BsonIgnore]
+        public Client Player { get => player; set { if (player is null) player = value; } }
+
+        [BsonIgnore]
+        public int Level { get; set; }
+
+        #endregion
+
+        #region Metody
+        ~Account()
+        {
+            Globals.Managers.account.setAccountUsed(AccountId, false);
         }
 
-        public void RebuildPlayer(Client player)
+        public List<Vehicle> GetPrivateVehicles() =>
+            Globals.Managers.vehicle.vehicles[EVehicleType.PRIVATE].FindAll(veh => veh.OwnerPID() == AccountId);
+
+        public void SetXP(uint xp)
         {
-            for(int i=0;i<20;i++)
+            Xp = xp;
+            Level = Globals.Managers.account.GetLevelFromXP(Xp);
+            if(!ReferenceEquals(Player, null))
+                Player.TriggerClient(CRPCManager.ERPCs.PLAYER_UPDATE_EXP, Xp, Level);
+        }
+
+        public void AddXP(uint xp)
+        {
+            SetXP(Xp + xp);
+        }
+
+        public void RebuildPlayerAccessories()
+        {
+            for (int i = 0; i < 20; i++)
                 player.ClearAccessory(i);
 
-            foreach(CAccessory accessory in accessories)
+            foreach (Accessory accessory in Accessories)
             {
-                player.SetAccessories(accessory.slot, accessory.drawable, accessory.texture);
+                player.SetAccessories(accessory.Slot, accessory.Drawable, accessory.Texture);
             }
         }
 
         public void AddAccessory(int slot, int drawable, int texture)
         {
-            accessories.RemoveAll(a => a.slot == slot);
-            accessories.Add(new CAccessory
+            Accessories.RemoveAll(a => a.Slot == slot);
+            Accessories.Add(new Accessory
             {
-                slot = slot,
-                drawable = drawable,
-                texture = texture,
+                Slot = slot,
+                Drawable = drawable,
+                Texture = texture,
             });
         }
 
         public void RemoveAccessory(int slot)
         {
-            accessories.RemoveAll(a => a.slot == slot);
-        }
-        public string GetSaveString()
-        {
-            List<string> accessoryAsStr = new List<string>();
-            foreach (CAccessory accessory in accessories)
-            {
-                accessoryAsStr.Add($"{accessory.slot},{accessory.drawable},{accessory.texture}");
-            }
-            if (accessoryAsStr.Count == 0)
-            {
-                return "";
-            }
-            else
-            {
-                return String.Join(";", accessoryAsStr);
-            }
+            Accessories.RemoveAll(a => a.Slot == slot);
         }
 
-    }
-
-    public class CClothesSet
-    {
-        public int slot;
-        public int drawable;
-        public int texture;
-    }
-    public class CClothes
-    {
-        public List<CClothesSet> clothes;
-
-        public CClothes()
-        {
-            clothes = new List<CClothesSet>();
-        }
-
-        public void RebuildPlayer(Client player)
+        public void RebuildPlayerClothes()
         {
             player.SetDefaultClothes();
 
-            for (int i=0;i<20;i++)
+            for (int i = 0; i < 20; i++)
                 player.ClearAccessory(i);
 
-            foreach(CClothesSet clothesSet in clothes)
+            foreach (Clothes clothesSet in Clothes)
             {
-                player.SetClothes(clothesSet.slot, clothesSet.drawable, clothesSet.texture);
+                player.SetClothes(clothesSet.Slot, clothesSet.Drawable, clothesSet.Texture);
             }
         }
 
         public void AddClothes(int slot, int drawable, int texture)
         {
-            clothes.RemoveAll(a => a.slot == slot);
-            clothes.Add(new CClothesSet
+            Clothes.RemoveAll(a => a.Slot == slot);
+            Clothes.Add(new Clothes
             {
-                slot = slot,
-                drawable = drawable,
-                texture = texture,
+                Slot = slot,
+                Drawable = drawable,
+                Texture = texture,
             });
         }
 
         public void RemoveClothes(int slot)
         {
-            clothes.RemoveAll(a => a.slot == slot);
+            Clothes.RemoveAll(a => a.Slot == slot);
         }
 
-        public string GetSaveString()
+        public bool SetPlayer(Client player)
         {
-            List<string> setsAsStr = new List<string>();
-            foreach(CClothesSet clothesSet in clothes)
-            {
-                setsAsStr.Add($"{clothesSet.slot},{clothesSet.drawable},{clothesSet.texture}");
-            }
-            if (setsAsStr.Count == 0)
-            {
-                return "";
-            }
-            else
-            {
-                return String.Join(";", setsAsStr);
-            }
-        }
-
-    }
-
-    public class CAccount
-    {
-
-        public readonly uint pid;
-        public readonly string login;
-        public readonly string email;
-        public long money;
-        public uint xp;
-        public ushort level;
-
-        public Client player;
-        private bool licensesUpdatedFromDB = false;
-        public List<CLicense> licenses = new List<CLicense>();
-        public CAccessories accessories = new CAccessories();
-        public CClothes clothes = new CClothes();
-        public Vector3 lastPosition = null;
-        public CInventory inventory;
-
-        public void SetXP(uint xp) 
-        {
-            this.xp = xp;
-            level = Globals.Managers.account.GetLevelFromXP(xp);
-            player.TriggerClient(CRPCManager.ERPCs.PLAYER_UPDATE_EXP, xp, level);
-        }
-
-        public void AddXP(uint xp)
-        {
-            SetXP(this.xp + xp);
-        }
-
-        public void SetPlayer(Client player)
-        {
-            player.AssignUID(pid);
-            accessories.RebuildPlayer(player);
-            clothes.RebuildPlayer(player);
+            if (this.player != null) return false;
 
             this.player = player;
+            LastLogin = DateTime.Now;
+            player.AssignUID(AccountId);
+            RebuildPlayerAccessories();
+            RebuildPlayerClothes();
 
-            SetXP(xp);
+            SetXP(Xp);
+            return true;
         }
 
-        public void CleanUp()
+        public License GetLicense(int lid)
         {
-
-        }
-
-        public void UpdateLicensesFromDB(bool force = false)
-        {
-            if (force || !licensesUpdatedFromDB)
+            if (HasLicense(lid))
             {
-                licensesUpdatedFromDB = true;
-                licenses.Clear();
-                List<CAccountsLicensesRow> dbResult = Globals.Mysql.select.GetAccountLicenses(pid);
-                foreach(CAccountsLicensesRow result in dbResult)
-                {
-                    licenses.Add(new CLicense {
-                        id = result.lid,
-                        suspended = result.suspended,
-                        reason = result.suspendedreason,
-                    });
-                }
-            }
-        }
-
-        public CLicense GetLicense(byte lid)
-        {
-            if(HasLicense(lid))
-            {
-                CLicense license = licenses.Find(delegate (CLicense i) { return i.id == lid; });
+                License license = Licenses.Find(l => l.LicenseId == lid);
                 if (license == null)
                 {
                     return null;
@@ -232,18 +238,17 @@ namespace Logic.Account
             }
             return null;
         }
-        public bool HasLicense(byte lid, bool checkIfIsSuspended = false)
+        public bool HasLicense(int lid, bool checkIfIsSuspended = false)
         {
-            UpdateLicensesFromDB();
-            CLicense license = licenses.Find(i => i.id == lid);
-            if(license == null)
+            License license = Licenses.Find(i => i.LicenseId == lid);
+            if (license == null)
             {
                 return false;
             }
-            
-            if(checkIfIsSuspended)
+
+            if (checkIfIsSuspended)
             {
-                if(license.isSuspended())
+                if (license.isSuspended())
                 {
                     return false;
                 }
@@ -253,99 +258,52 @@ namespace Logic.Account
 
         public bool GiveLicense(byte lid)
         {
-            if(HasLicense(lid))
+            if (HasLicense(lid))
             {
                 return false;
             }
-            Globals.Mysql.UpdateBlocking("insert into accounts_licenses (pid,lid)values(@p1,@p2)", pid, lid);
-            UpdateLicensesFromDB(true);
+
+            Licenses.Add(new License { LicenseId = lid });
+
             return true;
         }
 
-        public List<Vehicle> GetPrivateVehicles()
+        public void CleanUp()
         {
-            List<Vehicle> playerVehicles = new List<Vehicle>();
-            foreach (Vehicle vehicle in Globals.Managers.vehicle.vehicles[EVehicleType.PRIVATE])
-            {
-                if (vehicle.Owner() == player)
-                {
-                    playerVehicles.Add(vehicle);
-                }
-            }
-            return playerVehicles;
-        }
 
-        public CAccount(uint pid)
-        {
-            CAccountsRow result = Globals.Mysql.select.PlayerByUID(pid);
-
-            this.pid = result.pid;
-            login = result.login;
-            email = result.email;
-            money = result.money;
-            xp = result.xp;
-            accessories = result.accessory;
-            clothes = result.clothes;
-            if(result.lastPosition.Length() > 1)
-            {
-                lastPosition = result.lastPosition;
-            }
-
-            inventory = new CInventory(3, 3);
-            Globals.Managers.account.setAccountUsed(pid, true);
-        }
-
-        ~CAccount()
-        {
-            Globals.Managers.account.setAccountUsed(pid, false);
         }
 
         public void GiveMoney(long amount, string description)
         {
-            CLogger.LogMoney(pid, money, money + amount, description);
-            money += amount;
-            Save(CAccountData.ESave.MONEY);
+            //CLogger.LogMoney(AccountId, Money, Money + amount, description);
+            Money += amount;
+            //Save(CAccountData.ESave.MONEY);
         }
 
         public void TakeMoney(long amount, string description)
         {
-            CLogger.LogMoney(pid, money, money - amount, description);
-            money -= amount;
-            Save(CAccountData.ESave.MONEY);
+            //CLogger.LogMoney(pid, money, money - amount, description);
+            Money -= amount;
+            //Save(CAccountData.ESave.MONEY);
         }
 
         public void SetMoney(long amount, string description)
         {
-            CLogger.LogMoney(pid, money, amount, description);
-            money = amount;
-            Save(CAccountData.ESave.MONEY);
+            //CLogger.LogMoney(pid, money, amount, description);
+            Money = amount;
+            //Save(CAccountData.ESave.MONEY);
         }
 
-        public Vector3 GetLastPosition()
+        #endregion
+
+        #region Metody statyczne
+
+        public static long GetNextAccountId()
         {
-            return lastPosition;
+            return Globals.Mongo.CountDocuments(Collection) + 1;
         }
 
-        public bool Save(CAccountData.ESave save = CAccountData.ESave.ALL)
-        {
-            switch(save)
-            {
-                case CAccountData.ESave.ALL:
-                    Globals.Mysql.Update("update accounts set money = @p2, health = @p3, xp = @p4, clothes = @p5, accessory = @p6, lastposition = @p7 where pid = @p1 limit 1",
-                        pid, money, player.Health, xp, clothes.GetSaveString(), accessories.GetSaveString(), player.Position.ToStr());
-                    return true;
-                case CAccountData.ESave.APPEARANCE:
-                    Globals.Mysql.Update("update accounts set clothes = @p2, accessory = @p3 where pid = @p1 limit 1",
-                        pid, clothes.GetSaveString(), accessories.GetSaveString());
-                    return true;
-                case CAccountData.ESave.MONEY:
-                    Globals.Mysql.Update("update accounts set money = @p1 where pid = @p2 limit 1", money, pid);
-                    return true;
-                case CAccountData.ESave.XP:
-                    Globals.Mysql.Update("update accounts set xp = @p1 where pid = @p2 limit 1", xp, pid);
-                    return true;
-            }
-            return false;
-        }
+        #endregion
+
     }
 }

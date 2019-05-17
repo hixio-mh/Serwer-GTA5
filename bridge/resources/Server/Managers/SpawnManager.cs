@@ -9,7 +9,6 @@ using GTANetworkMethods;
 using DevOne.Security.Cryptography.BCrypt;
 using Database;
 using Main;
-using Logic.Account;
 using Extend;
 using Newtonsoft.Json;
 using Utils;
@@ -18,7 +17,7 @@ namespace Managers
 {
     public class CSpawnManager
     {
-        List<CSpawnRow> spawnList = new List<CSpawnRow>();
+        /*List<CSpawnRow> spawnList = new List<CSpawnRow>();
 
         public void UpdateSpawnList()
         {
@@ -77,6 +76,6 @@ namespace Managers
                 }
             }
             SpawnPlayer(player, spawn.position, spawn.rotation);
-        }
+        }*/
     }
 }

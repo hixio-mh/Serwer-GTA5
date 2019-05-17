@@ -11,6 +11,7 @@ namespace Systems
 {
     public class CPublicVehicles
     {
+        /*
         List<CVehiclePublicRow> PublicVehiclesSpawns = new List<CVehiclePublicRow>();
         List<Vehicle> PublicVehicles = new List<Vehicle>();
 
@@ -104,6 +105,6 @@ namespace Systems
         {
             UpdateSpawnList();
             SpawnPublicVehicles();
-        }
+        }*/
     }
 }

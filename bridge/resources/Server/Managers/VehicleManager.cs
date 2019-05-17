@@ -9,7 +9,6 @@ using GTANetworkMethods;
 using DevOne.Security.Cryptography.BCrypt;
 using Database;
 using Main;
-using Logic.Account;
 using Extend;
 using Vehicle = GTANetworkAPI.Vehicle;
 
@@ -44,7 +43,7 @@ namespace Managers
 
                     break;
                 case EVehicleType.PUBLIC:
-                    Globals.Systems.publicVehicles.OnPlayerEnterPublicVehicle(player, vehicle, seatID);
+                    //Globals.Systems.publicVehicles.OnPlayerEnterPublicVehicle(player, vehicle, seatID);
                     break;
                 case EVehicleType.EXAM:
 
@@ -135,7 +134,7 @@ namespace Managers
 
                     break;
                 case EVehicleType.PUBLIC:
-                    Globals.Systems.publicVehicles.RemovePublicVehicle(vehicle, clearing);
+                    //Globals.Systems.publicVehicles.RemovePublicVehicle(vehicle, clearing);
                     break;
                 case EVehicleType.EXAM:
 
@@ -156,24 +155,25 @@ namespace Managers
 
         public uint GetLastVid()
         {
-            return Convert.ToUInt32(Globals.Mysql.GetValue("select max(vid) from vehicles limit 1"));
+            return 0;//Convert.ToUInt32(Globals.Mysql.GetValue("select max(vid) from vehicles limit 1"));
         }
 
         public uint CreatePrivateVehicle(VehicleHash vehicleHash, Client owner, Vector3 position = null, Vector3 rotation = null)
         {
             if(position != null && rotation != null)
             {
-                Globals.Mysql.UpdateBlocking("insert into vehicles (vehiclehash,pid,firstowner,position,rotation)values(@p1,@p2,@p2.@p3,@p3)", (uint)vehicleHash, owner.UID(), position.ToStr(), rotation.ToStr());
+                //Globals.Mysql.UpdateBlocking("insert into vehicles (vehiclehash,pid,firstowner,position,rotation)values(@p1,@p2,@p2.@p3,@p3)", (uint)vehicleHash, owner.UID(), position.ToStr(), rotation.ToStr());
             }
             else
             {
-                Globals.Mysql.UpdateBlocking("insert into vehicles (vehiclehash,pid,firstowner)values(@p1,@p2,@p2)", (uint)vehicleHash, owner.UID());
+                //Globals.Mysql.UpdateBlocking("insert into vehicles (vehiclehash,pid,firstowner)values(@p1,@p2,@p2)", (uint)vehicleHash, owner.UID());
             }
             return GetLastVid();
         }
 
         public Vehicle SpawnPrivateVehicle(uint vid, Vector3 position = null, Vector3 rotation = null)
         {
+            /*
             if(IsPrivateVehicleAlreadySpawned(vid))
             {
                 return null;
@@ -191,7 +191,7 @@ namespace Managers
                     veh.SetOwner(vehRow.pid);
                     return veh;
                 }
-            }
+            }*/
 
             return null;
         }

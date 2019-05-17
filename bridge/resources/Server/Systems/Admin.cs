@@ -6,7 +6,6 @@ using Database;
 using Managers;
 using Extend;
 using GTANetworkAPI;
-using Logic.Account;
 using Vehicle = GTANetworkAPI.Vehicle;
 
 namespace Systems
@@ -26,7 +25,6 @@ namespace Systems
         void duty(Client player)
         {
             Console.WriteLine("CanStartDuty {0}", Globals.Managers.admin.CanStartDuty(player));
-            Console.WriteLine("HasAccessToCommand {0} {1}", Globals.Managers.admin.HasAccessToCommand(player, "gp"), Globals.Managers.admin.HasAccessToCommand(player, "update"));
             if(player.IsOnDuty())
             {
                 Globals.Managers.admin.StopDuty(player);
@@ -49,7 +47,7 @@ namespace Systems
             switch (co)
             {
                 case EUpdate.PUBLIC_VEHICLES:
-                    Globals.Systems.publicVehicles.Update();
+                    //Globals.Systems.publicVehicles.Update();
                     break;
             }
         }
@@ -111,9 +109,9 @@ namespace Systems
                 return;
             }
 
-            CAccount account = Globals.Managers.account.Register(login, hasło, email);
-            Globals.Managers.account.LogIn(player, account);
-            player.SendChatMessage("Zarejestrowano i zalogowano pomyślnie, id konta {0}", player.Account().pid);
+            //CAccount account = Globals.Managers.account.Register(login, hasło, email);
+            //Globals.Managers.account.LogIn(player, account);
+            //player.SendChatMessage("Zarejestrowano i zalogowano pomyślnie, id konta {0}", player.Account().pid);
         }
         [Command("login")]
         void login(Client player, string login, string hasło)
@@ -147,9 +145,9 @@ namespace Systems
                 player.SendChatMessage("Hasło niepoprawne.");
                 return;
             }
-            Globals.Managers.account.LogIn(player, pid);
-            Globals.Managers.spawn.SpawnPlayer(player, true);
-            player.SendChatMessage("Zalogowano pomyślnie, id konta {0}", player.Account().pid);
+            //Globals.Managers.account.LogIn(player, pid);
+            //Globals.Managers.spawn.SpawnPlayer(player, true);
+            //player.SendChatMessage("Zalogowano pomyślnie, id konta {0}", player.Account().pid);
         }
 
         [Command("testac")]
@@ -157,7 +155,7 @@ namespace Systems
         {
             if (player.IsLoggedIn())
             {
-                player.SendChatMessage(String.Format("testac ZALOGOWANY {0}", player.Account().pid));
+                //player.SendChatMessage(String.Format("testac ZALOGOWANY {0}", player.Account().pid));
             }
             else
             {
@@ -246,8 +244,8 @@ namespace Systems
         [Command("itstart")]
         void itstart(Client player)
         {
-            Globals.Managers.account.LogIn(player, 5);
-            player.SendChatMessage("test zalogowano {0}",player.Account());
+            //Globals.Managers.account.LogIn(player, 5);
+            //player.SendChatMessage("test zalogowano {0}",player.Account());
         }
 
         [Command("itemtest")]

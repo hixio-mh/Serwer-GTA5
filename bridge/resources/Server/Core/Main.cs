@@ -16,18 +16,23 @@ using Logic.Inventory;
 using Extend;
 using Systems;
 using Newtonsoft.Json.Linq;
+using Mongo;
+using Model.Logs;
+using Interfaces;
+using Models;
 
 namespace Main
 {
-    using MySql.Data.MySqlClient;
+    //using MySql.Data.MySqlClient;
     public static class Globals
     {
         static public CMain Main;
-        static public CMysql Mysql;
+        //static public CMysql Mysql;
         static public CManagers Managers;
         static public CUtils Utils;
         static public CSystems Systems;
-        static public CConfig Config;
+        static public Config Config;
+        static public CMongoDB Mongo;
     }
 
     public class CMain : Script
@@ -44,11 +49,14 @@ namespace Main
 
             Globals.Main = this;
             Globals.Utils = new CUtils();
-            Globals.Mysql = CMysql.initialize();
+            //Globals.Mysql = CMysql.initialize();
+            CMongoDB.Initialize();
+
             Globals.Managers = new CManagers();
             VehicleData.InitiliazeDefault();
             Globals.Systems = new CSystems();
-            Globals.Config = new CConfig();
+            Globals.Config = new Config();
+            Globals.Mongo.OnMongoReady();
             NAPI.Server.SetCommandErrorMessage("Komenda nie istnieje");
 
             //Console.Clear();
@@ -58,6 +66,11 @@ namespace Main
 
         public void Test()
         {
+
+            //IAccount account = new Account();
+            //new LogsMoney { AccountId = 5 }.Log();
+
+            /*
             CInventory inv1 = new CInventory(3,2);
 
             CInventory inv2 = new CInventory(2,2);
@@ -74,7 +87,10 @@ namespace Main
             innaKarta.cardId = 123456;
             inv1.SyncItem(innaKarta, null);
             //Console.WriteLine(inv1.ToJSON());
-            inv1.TakeItem(b);
+            inv1.TakeItem(b);*/
+
+
+
             /*int a = 5;
             int b = 10;
             int c = 50;
@@ -130,7 +146,7 @@ namespace Main
         [ServerEvent(Event.PlayerDeath)]
         public void OnPlayerDeath(Client player, Client killer, uint reason)
         {
-            Globals.Managers.spawn.SpawnPlayer(player);
+            //Globals.Managers.spawn.SpawnPlayer(player);
         }
 
         [ServerEvent(Event.PlayerConnected)]
@@ -141,7 +157,7 @@ namespace Main
             NAPI.Entity.SetEntityPosition(player, new Vector3(9999, 9999, 9999));
             // NAPI.Entity.SetEntityPositionFrozen(player, true);
             //player.FreezePosition = true;
-            Globals.Managers.spawn.SpawnPlayer(player, true);
+            //Globals.Managers.spawn.SpawnPlayer(player, true);
         }
 
         [ServerEvent(Event.PlayerDisconnected)]

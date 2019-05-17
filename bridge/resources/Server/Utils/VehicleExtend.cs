@@ -57,8 +57,8 @@ namespace Extend
         public void SetOwner(Client owner)
         {
             this.owner = owner;
-            uint? tmpPid = owner.UID();
-            if (tmpPid != null)
+            long? tmpPid = owner.UID();
+            if (tmpPid.HasValue)
             {
                 pid = (uint)tmpPid;
                 vehicle.SetSharedData("owner", pid);

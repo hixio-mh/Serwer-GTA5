@@ -9,6 +9,8 @@ using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
 using Extend;
+using Model.Logs;
+using System.Configuration.Assemblies;
 
 namespace Utils
 {
@@ -82,13 +84,18 @@ namespace Utils
         }
     }
 
-    internal static class ReflectionHelper
+    public static class ReflectionHelper
     {
-
         public static IEnumerable<MethodInfo> GetMethodsWithAttribute(Type classType, Type attributeType)
         {
             return classType.GetMethods().Where(methodInfo => methodInfo.GetCustomAttributes(attributeType, true).Length > 0);
         }
 
+        public static IEnumerable<Type> GetAllSubclassOf(Type parent)
+        {
+            foreach (Assembly a in AppDomain.CurrentDomain.GetAssemblies())
+                foreach (Type t in a.GetTypes())
+                    if (t.IsSubclassOf(parent)) yield return t;
+        }
     }
 }

@@ -9,11 +9,11 @@ using GTANetworkInternals;
 using GTANetworkMethods;
 using Main;
 using Attributes;
-using Logic.Account;
 using Utils;
 
 namespace Database
 {
+    /*
     using MySql.Data.MySqlClient;
     using MySql;
 
@@ -774,5 +774,5 @@ namespace Database
 
         [MysqlColumn("data")]
         public string data;
-    }
+    }*/
 }

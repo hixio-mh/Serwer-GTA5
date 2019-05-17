@@ -10,7 +10,6 @@ using Newtonsoft.Json.Linq;
 using System.Reflection;
 using System.Linq;
 using Utils;
-using Logger;
 using Logic.Inventory;
 
 namespace Managers
@@ -49,7 +48,7 @@ namespace Managers
         public SItemPosition position;
         //public string data;
 
-        public void SyncToClient(CInventory inventory, Client player)
+        public void SyncToClient(Inventory inventory, Client player)
         {
             string data = ToJson(false);
         }
@@ -231,6 +230,7 @@ namespace Managers
 
         public void UpdateDefaultItems()
         {
+            /*
             defaultItems.Clear();
             List<CItemBaseRow> items = new List<CItemBaseRow>();
             Globals.Mysql.GetTableRows(ref items);
@@ -252,7 +252,7 @@ namespace Managers
                     newItem.LoadDataFromJson(item.data);
                     defaultItems.Add(newItem);
                 }
-            });
+            });*/
         }
 
         public CItem CreateItem(EItemType itemType)

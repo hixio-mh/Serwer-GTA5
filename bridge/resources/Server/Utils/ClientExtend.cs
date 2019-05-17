@@ -2,7 +2,7 @@
 using GTANetworkAPI;
 using GTANetworkInternals;
 using GTANetworkMethods;
-using Logic.Account;
+using Models;
 using Main;
 using Managers;
 
@@ -10,12 +10,12 @@ namespace Extend
 {
     public static class CClientExtension
     {
-        public static void SetAccount(this GTANetworkAPI.Client player, CAccount playerAccount)
+        public static void SetAccount(this GTANetworkAPI.Client player, Account playerAccount)
         {
             player.SetData("extension", playerAccount);
         }
 
-        public static CAccount GetExtension(this GTANetworkAPI.Client player)
+        public static Account GetExtension(this GTANetworkAPI.Client player)
         {
             if (!player.HasData("extension"))
             {
@@ -35,7 +35,7 @@ namespace Extend
             {
                 return null;
             }
-            return player.Account().GetLastPosition();
+            return player.Account().LastPosition;
         }
 
         public static bool Save(this GTANetworkAPI.Client player)
@@ -46,7 +46,7 @@ namespace Extend
             }
             return player.Account().Save();
         }
-        public static CAccount Account(this GTANetworkAPI.Client player)
+        public static Account Account(this GTANetworkAPI.Client player)
         {
             return player.GetExtension();
         }
@@ -58,7 +58,7 @@ namespace Extend
         
         public static void CleanUp(this GTANetworkAPI.Client player)
         {
-            Globals.Systems.publicVehicles.ClearPlayerPublicVehicle(player);
+            //Globals.Systems.publicVehicles.ClearPlayerPublicVehicle(player);
             Globals.Managers.admin.StopDuty(player);
 
             if (player.Account() == null) return;
@@ -85,28 +85,28 @@ namespace Extend
         {
             if (player.Account() == null) return false;
 
-            return player.Account().inventory.GiveItem(item, x, y);
+            return player.Account().Inventory.GiveItem(item, x, y);
         }
 
         public static CItem GiveItem(this GTANetworkAPI.Client player, uint item, byte? x = null, byte? y = null)
         {
             if (player.Account() == null) return null;
 
-            return player.Account().inventory.GiveItem(item, x, y);
+            return player.Account().Inventory.GiveItem(item, x, y);
         }
 
         public static int GetFreeSlots(this GTANetworkAPI.Client player)
         {
             if (player.Account() == null) return 0;
 
-            return player.Account().inventory.FreeSlots;
+            return player.Account().Inventory.FreeSlots;
         }
         
         public static CItem GetItemBySlot(this GTANetworkAPI.Client player, byte x, byte y)
         {
             if (player.Account() == null) return null;
 
-            return player.Account().inventory.GetItemBySlot(x,y);
+            return player.Account().Inventory.GetItemBySlot(x,y);
         }
 
     }

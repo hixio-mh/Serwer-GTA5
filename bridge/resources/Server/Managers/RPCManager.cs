@@ -118,7 +118,7 @@ namespace Managers
 
         void OnExamsQuestions(Client player, CRPCExamsQuestion rpc)
         {
-            player.TriggerClient(ERPCs.EXAMS_QUESTIONS_CALLBACK, Globals.Systems.exams.GetExamQuestions((byte)rpc.examID));
+        //    player.TriggerClient(ERPCs.EXAMS_QUESTIONS_CALLBACK, Globals.Systems.exams.GetExamQuestions((byte)rpc.examID));
         }
     }
 }

@@ -10,54 +10,59 @@ using GTANetworkMethods;
 using Main;
 using Managers;
 using Database;
-using Logger;
 using Data.Account;
 using Extend;
 using Newtonsoft.Json.Linq;
 using Vehicle = GTANetworkAPI.Vehicle;
+using Mongo;
+using MongoDB;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using Model.Database;
+using Interfaces;
 
 namespace Logic.Inventory
 {
-    public struct SInventoryCapacity
+    public class InventoryCapacity
     {
         public ushort x, y;
         public int size { get { return x * y; } }
-        public SInventoryCapacity(ushort x, ushort y)
+        public InventoryCapacity(ushort x, ushort y)
         {
             this.x = x;
             this.y = y;
         }
     }
 
-    public class CInventory
+    public class Inventory : MongoResult<Inventory>
     {
-        public static List<CInventory> inventoryPool = new List<CInventory>();
+        public static List<Inventory> inventoryPool { get; set; } = new List<Inventory>();
 
-        public uint id;
+        public long InventoryId = 0;
         public List<CItem> items;
-        public SInventoryCapacity capacity;
+        public InventoryCapacity capacity;
 
-        public static uint FindFreeID()
+        public static long FindFreeID()
         {
             if (inventoryPool.Count == 0)
                 return 1;
 
-            uint freeID = inventoryPool.Max(inventory => inventory.id);
+            long freeID = inventoryPool.Max(inventory => inventory.InventoryId);
 
             return freeID + 1;
         }
 
-        public CInventory(ushort sizeX, ushort sizeY)
+        public Inventory(ushort sizeX, ushort sizeY)
         {
-            id = FindFreeID();
-            //CDebug.Debug("nadaj id", id);
+            if(InventoryId == 0)
+                InventoryId = FindFreeID();
             inventoryPool.Add(this);
             items = new List<CItem>();
-            capacity = new SInventoryCapacity(0, 0);
+            capacity = new InventoryCapacity(0, 0);
             Resize(sizeX, sizeY);
         }
 
-        ~CInventory()
+        ~Inventory()
         {
             inventoryPool.Remove(this);
         }
@@ -213,7 +218,7 @@ namespace Logic.Inventory
             return true;
         }
 
-        public bool MoveItem(CItem item, CInventory inventory, ushort x, ushort y)
+        public bool MoveItem(CItem item, Inventory inventory, ushort x, ushort y)
         {
             if (ReferenceEquals(item, null)) return false;
 

@@ -5,14 +5,13 @@ using Main;
 using Database;
 using Extend;
 using GTANetworkAPI;
-using Logic.Account;
 using Vehicle = GTANetworkAPI.Vehicle;
 
 namespace Systems
 {
     public class CExams
     {
-        public List<CExamQuestion> questions = new List<CExamQuestion>();
+        /*public List<CExamQuestion> questions = new List<CExamQuestion>();
         public void UpdateQuestions()
         {
             questions.Clear();
@@ -28,6 +27,6 @@ namespace Systems
         public CExams()
         {
             UpdateQuestions();
-        }
+        }*/
     }
 }

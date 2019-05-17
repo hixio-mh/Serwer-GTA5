@@ -9,15 +9,13 @@ using GTANetworkMethods;
 using DevOne.Security.Cryptography.BCrypt;
 using Database;
 using Main;
-using Logic.Account;
 using Extend;
 
 namespace Managers
 {
     public class CAccountManager
     {
-        List<uint> listUsedAccounts = new List<uint>();
-        List<CLevelRow> levelsRows = new List<CLevelRow>();
+        List<long> listUsedAccounts = new List<long>();
 
         public CAccountManager()
         {
@@ -26,25 +24,25 @@ namespace Managers
 
         public void UpdateLevels()
         {
-            levelsRows.Clear();
-            Globals.Mysql.GetTableRows(ref levelsRows);
+            //levelsRows.Clear();
+            //Globals.Mysql.GetTableRows(ref levelsRows);
         }
 
-        public ushort GetLevelFromXP(uint xp)
+        public int GetLevelFromXP(uint xp)
         {
-            foreach (CLevelRow levelRow in levelsRows)
+            /*foreach (CLevelRow levelRow in levelsRows)
             {
-                if (xp < levelRow.xp) return (ushort)(levelRow.level - 1);
-            }
+                if (xp < levelRow.xp) return (levelRow.level - 1);
+            }*/
 
             return 1;
         }
 
         public uint GetLastPid()
         {
-            return Convert.ToUInt32(Globals.Mysql.GetValue("select max(pid) from accounts limit 1"));
+            return 0;//Convert.ToUInt32(Globals.Mysql.GetValue("select max(pid) from accounts limit 1"));
         }
-        public void setAccountUsed(uint id, bool used)
+        public void setAccountUsed(long id, bool used)
         {
             if(used)
             {
@@ -64,11 +62,11 @@ namespace Managers
 
         public bool AccountExists(string login, string email)
         {
-            bool loginOccupied = Globals.Mysql.select.PlayerByLogin(login).isResult;
+            bool loginOccupied = false;// Globals.Mysql.select.PlayerByLogin(login).isResult;
             if (loginOccupied)
                 return true;
 
-            bool emailOccupied = Globals.Mysql.select.PlayerByEmail(email).isResult;
+            bool emailOccupied = false;// Globals.Mysql.select.PlayerByEmail(email).isResult;
             if (emailOccupied)
                 return true;
 
@@ -76,14 +74,14 @@ namespace Managers
         }
         public bool AccountExists(string login)
         {
-            bool loginOccupied = Globals.Mysql.select.PlayerByLogin(login).isResult;
+            bool loginOccupied = false;// Globals.Mysql.select.PlayerByLogin(login).isResult;
             if (loginOccupied)
                 return true;
 
             return false;
         }
 
-        public CAccount Register(string login, string pass, string email)
+        /*public CAccount Register(string login, string pass, string email)
         {
             if(AccountExists(login,pass))
             {
@@ -93,18 +91,18 @@ namespace Managers
             Globals.Mysql.UpdateBlocking("insert into accounts (login,pass,email)values(@p1,@p2,@p3)", login, bcryptedPass, email);
 
             return new CAccount(GetLastPid());
-        }
+        }*/
 
         public uint CheckCredentials(string loginOrEmail, string pass)
         {
-            CAccountsRow resultLogin = Globals.Mysql.select.PlayerByLogin(loginOrEmail);
+            /*CAccountsRow resultLogin = Globals.Mysql.select.PlayerByLogin(loginOrEmail);
             if(resultLogin.isResult)
             {
                 if(BCryptHelper.CheckPassword(pass, resultLogin.pass))
                 {
                     return resultLogin.pid;
                 }
-            }
+            }*/
             /*
             CPlayersResult resultEmail = Globals.gMysql.select.PlayerByEmail(loginOrEmail);
             if (resultEmail.isResult)
@@ -116,7 +114,7 @@ namespace Managers
             }*/
             return 0;
         }
-        public CAccount LogIn(Client player, uint pid)
+        /*public CAccount LogIn(Client player, uint pid)
         {
             if(isAccountInUse(pid))
                 return null;
@@ -132,6 +130,6 @@ namespace Managers
             account.SetPlayer(player);
             player.SetAccount(account);
             return account;
-        }
+        }*/
     }
 }
